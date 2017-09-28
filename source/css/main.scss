@@ -164,7 +164,7 @@
 }
 
 @mixin small_phones {
-	@media screen and (max-width: 320px) {
+	@media screen and (max-width: 360px) {
 		@content;
 	}
 }
@@ -188,7 +188,6 @@ body {
 	line-height: 1.6;
 }
 
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -210,17 +209,24 @@ p {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
+
 // base style flex
-.wrapper {
+.body {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.container {
-	width: 1440px;
+.row {
+	max-width: 1140px;
+  // width: 80%;
 	align-self: center;
 	display: flex;
+	flex-flow: row wrap;
 }
 
 .main {
@@ -231,14 +237,64 @@ p {
 // header
 .header {
 	height: 100vh;
-	
+	width: 100%;
+	background: url('../img/fon-1.jpg') no-repeat center top/cover;
+}
+
+.header__top {
+	min-height: 75px;
+  padding: 0 13vh;
+	background-color: rgba(56, 80, 116, .5);
+}
+
+.header__top nav {
+  @include laptop {
+    flex-flow: column wrap;
+  }
+}
+
+.header__nav {
+	display: flex;
+	flex-flow: row wrap;
+	// align-self: center;
+	min-height: 75px;
+  max-width: 650px;
+	flex: 1.5;
+  margin-left: auto;
+	align-items: center;
+	justify-content: space-between;
+  @include laptop {
+    flex-direction: column;
+    margin-left: 0;
+    padding-bottom: 1.5vh;
+  }
+}
+
+.header__item {
+  // flex: 1;
+}
+
+.header__logo {
+  flex: 0.3;
+  display: flex;
+  justify-content: flex-start;
+  @include laptop {
+    justify-content: center;
+  }
+}
+
+.header__link {
+	@include opensans(semi);
+	font-size: 1.6rem;
+	color: #fffcf1;
 }
 
 
-// section footer
+
+// footer
 .footer {
-	outline: $outline;
 	flex: 0 0 auto;
 	min-height: 580px;
+	width: 100%;
 	background-color: #1a1a1a;
 }

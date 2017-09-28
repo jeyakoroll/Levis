@@ -3,7 +3,7 @@ const gulp = require('gulp'),
       concat = require('gulp-concat'),
       pump = require('pump'),
       browserSync = require('browser-sync').create(),
-      sourcemaps = require('gulp-sourcemaps'),
+      // sourcemaps = require('gulp-sourcemaps'),
       concatCss = require('gulp-concat-css'),
       autoprefixer = require('gulp-autoprefixer'),
       cssmin = require('gulp-cssmin'),
@@ -22,10 +22,10 @@ const path_css_files = [
 gulp.task('dev_compress_js', function (cb) {
   pump([
         gulp.src( path_js_files ),
-        sourcemaps.init(),
+        // sourcemaps.init(),
         // uglify({'mangle': false}),
         concat('main.min.js'),
-        sourcemaps.write(),
+        // sourcemaps.write(),
         gulp.dest('./public/js')
     ],
     cb
@@ -46,13 +46,13 @@ gulp.task('prod_compress_js', function (cb) {
 gulp.task('dev_concat_css', function () {
     return gulp.src(path_css_files)
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(concatCss("all.min.css"))
     .pipe(autoprefixer({ 
         browsers: ['last 2 version'],
         cascade: false
      }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'));
 });
 
