@@ -143,7 +143,7 @@ a {
   -webkit-box-flex: 1.5;
   -ms-flex: 1.5;
   flex: 1.5;
-  margin-left: auto;
+  margin: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -161,7 +161,7 @@ a {
 
 @media screen and (max-width: 1200px) {
   .header__nav {
-    margin: auto;
+    margin-left: auto;
   }
 }
 
@@ -223,9 +223,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__logo {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -288,6 +296,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 5.3vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
@@ -298,6 +307,12 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__bottom-aside {
+    padding-left: 0;
+  }
 }
 
 .header__bottom-title {
@@ -344,6 +359,12 @@ a {
   }
 }
 
+.history .row {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1200px) {
   .history .row {
     -webkit-box-orient: horizontal;
@@ -369,17 +390,16 @@ a {
 }
 
 .history__pic {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   position: relative;
-  width: 390px;
-  height: 465px;
+  width: 430px;
+  height: 530px;
+  margin-right: 6vw;
+  margin-top: -2vh;
 }
 
 @media screen and (max-width: 1200px) {
   .history__pic {
-    margin-top: -18vh;
+    margin-top: -12vh;
     -webkit-box-flex: 1.5;
     -ms-flex: 1.5;
     flex: 1.5;
@@ -389,6 +409,7 @@ a {
 @media screen and (max-width: 992px) {
   .history__pic {
     margin-top: 3vh;
+    margin-right: 0;
     width: 290px;
     height: 365px;
   }
@@ -401,8 +422,8 @@ a {
   bottom: 0;
   margin: auto;
   position: absolute;
-  max-width: 95%;
-  max-height: 95%;
+  max-width: 99%;
+  max-height: 99%;
 }
 
 .history__text {
@@ -419,6 +440,7 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  max-width: 470px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -427,6 +449,7 @@ a {
     -ms-flex: 1.5;
     flex: 1.5;
     width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -644,6 +667,12 @@ a {
 .advantages {
   min-height: 645px;
   background-image: url("../img/fon-3.jpg");
+}
+
+@media screen and (max-width: 1200px) {
+  .advantages {
+    min-height: auto;
+  }
 }
 
 .empty {
