@@ -82,13 +82,24 @@
 }
 
 @mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
-	background-color: $top-color;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
-	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-	background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
-	background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
-	background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
+  background-color: $top-color;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
+  background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
+  background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
+  background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
+}
+
+@mixin vertical-gradient {
+background: rgba(241,111,92,1);
+background: -moz-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(255,255,255,1) 0%, rgba(250,250,250,0.83) 2%, rgba(0,0,0,0.83) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(241,111,92,1)), color-stop(0%, rgba(255,255,255,1)), color-stop(2%, rgba(250,250,250,0.83)), color-stop(100%, rgba(0,0,0,0.83)));
+background: -webkit-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(255,255,255,1) 0%, rgba(250,250,250,0.83) 2%, rgba(0,0,0,0.83) 100%);
+background: -o-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(255,255,255,1) 0%, rgba(250,250,250,0.83) 2%, rgba(0,0,0,0.83) 100%);
+background: -ms-linear-gradient(top, rgba(241,111,92,1) 0%, rgba(255,255,255,1) 0%, rgba(250,250,250,0.83) 2%, rgba(0,0,0,0.83) 100%);
+background: linear-gradient(to bottom, rgba(241,111,92,1) 0%, rgba(255,255,255,1) 0%, rgba(250,250,250,0.83) 2%, rgba(0,0,0,0.83) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#000000', GradientType=0 );
 }
 
 @mixin transform($transforms...) {
@@ -132,6 +143,12 @@
 }
 
 /* --------- responsive mixins --------- */
+
+@mixin more_desktop {
+  @media screen and (max-width: 1260px) {
+    @content;
+  }
+}
 
 @mixin desktop {
 	@media screen and (max-width: 1200px) {
@@ -254,6 +271,8 @@ a {
 	min-height: 75px;
   padding: 0 13vh;
 	background-color: rgba(56, 80, 116, .5);
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -271,10 +290,13 @@ a {
 	min-height: 75px;
   max-width: 650px;
 	flex: 1.5;
-  margin: auto;
+  margin-left: auto;
 	align-items: center;
 	justify-content: space-between;
   @include opensans(semi);
+  @include more_desktop {
+    margin: auto;
+  }
   @include desktop {
     margin: auto;
   }
@@ -483,7 +505,221 @@ a {
   }
 }
 
+// gallery
+.gallery {
+  display: none;
+  flex-flow: column wrap;
+  min-height: 1135px;
+  background-color: #fffcf1;
+}
 
+.gallery .row {
+  flex-direction: column;
+  width: 1180px;
+}
+
+.gallery__title {
+  @include opensans(ruso);
+  font-size: 3rem;
+  color: #305b7b;
+  display: flex;
+  justify-content: center;
+  margin-top: 105px;
+  margin-bottom: 65px;
+}
+
+// gallery slider
+.gallery__slider {
+  display: none;
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin-right: -15px;
+  margin-bottom: 65px;
+}
+
+.gallery__slider-item {
+  height: 245px;
+  width: 195px;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  margin: 0 10px;
+  box-shadow: 0px 0px 12px #999;
+}
+
+.gallery__slider-pic {
+  @include absolute-center;
+  background-size: cover;
+  max-width: 99%;
+  max-height: 99%;
+}
+
+.br {
+  display: none;
+}
+
+.gallery__slider-text {
+  height: 67px;
+  z-index: 1;
+  background-color: rgba(0,0,0,.4);
+  @include opensans(ruso);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  &:hover {
+    height: 100%;
+    @include vertical-gradient;
+    font-size: 30px; 
+    line-height: 30px;
+    cursor: pointer;
+    .gallery__slider-par {
+      margin-top: 7px;
+    } 
+    .br {
+      display: block;
+    }
+  }
+}
+
+.gallery__slider-title {
+  text-decoration: uppercase;
+  color: #f8f8f8;
+  margin-top: auto;
+  text-align: center;
+  // white-space: pre-line;
+}
+
+.gallery__slider-par {
+  color: #f8f8f8;
+  // margin: auto;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: auto;
+  &:hover {
+    // font-size: 18px !important;
+  }
+}
+
+// gallery preview
+.gallery__preview {
+  flex: 1;
+}
+
+.gallery__preview-show {
+
+}
+
+.gallery__preview-pic {
+
+}
+
+.gallery__preview-list {
+
+}
+
+.gallery__preview-item {
+
+}
+
+// gallery descr
+.gallery__descr {
+
+}
+
+.gallery__descr-list {
+
+}
+
+.gallery__descr-title {
+
+}
+
+.gallery__descr-item {
+
+}
+
+.gallery__descr-old_prise {
+
+}
+
+.gallery__descr-prise {
+
+}
+
+.gallery__descr-button {
+
+}
+
+.gallery__descr-button_buy {
+
+}
+
+.gallery__descr-button_size {
+
+}
+
+
+
+// advantages
+.advantages {
+  min-height: 645px;
+  background-image: url('../img/fon-3.jpg');
+}
+
+.advantages__title {
+
+}
+
+.advantages__list {
+
+}
+
+.advantages__list-item {
+
+}
+
+.advantages__pic {
+
+}
+
+.advantages__pic-item {
+
+}
+
+// empty
+.empty {
+  min-height: 118px;
+  background-color: #fffcf1;
+}
+
+.relationship {
+  background-color: #305b7b;
+  min-height: 167px;
+  display: flex;
+}
+
+.relationship__item {
+
+}
+
+.relationship__icon {
+
+}
+
+.relationship__text {
+
+}
+
+// reviews
+.reviews {
+  min-height: 865px;
+  background-color: #fffcf1;
+}
 
 // footer
 .footer {

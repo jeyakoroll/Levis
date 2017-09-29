@@ -113,6 +113,12 @@ a {
   min-height: 75px;
   padding: 0 13vh;
   background-color: rgba(56, 80, 116, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 992px) {
@@ -137,7 +143,7 @@ a {
   -webkit-box-flex: 1.5;
   -ms-flex: 1.5;
   flex: 1.5;
-  margin: auto;
+  margin-left: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -145,6 +151,12 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: 'OpenSansSemiBold';
+}
+
+@media screen and (max-width: 1260px) {
+  .header__nav {
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -479,6 +491,177 @@ a {
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
+}
+
+.gallery {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  min-height: 1135px;
+  background-color: #fffcf1;
+}
+
+.gallery .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 1180px;
+}
+
+.gallery__title {
+  font-family: 'RussoOneRegular';
+  font-size: 3rem;
+  color: #305b7b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 105px;
+  margin-bottom: 65px;
+}
+
+.gallery__slider {
+  display: none;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-right: -15px;
+  margin-bottom: 65px;
+}
+
+.gallery__slider-item {
+  height: 245px;
+  width: 195px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 0 10px;
+  -webkit-box-shadow: 0px 0px 12px #999;
+  box-shadow: 0px 0px 12px #999;
+}
+
+.gallery__slider-pic {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  background-size: cover;
+  max-width: 99%;
+  max-height: 99%;
+}
+
+.br {
+  display: none;
+}
+
+.gallery__slider-text {
+  height: 67px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: 'RussoOneRegular';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.gallery__slider-text:hover {
+  height: 100%;
+  background: #f16f5c;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), color-stop(100%, rgba(0, 0, 0, 0.83)));
+  background: -webkit-gradient(linear, left top, left bottom, from(#f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), to(rgba(0, 0, 0, 0.83)));
+  background: linear-gradient(to bottom, #f16f5c 0%, white 0%, rgba(250, 250, 250, 0.83) 2%, rgba(0, 0, 0, 0.83) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#000000', GradientType=0 );
+  font-size: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.gallery__slider-text:hover .gallery__slider-par {
+  margin-top: 7px;
+}
+
+.gallery__slider-text:hover .br {
+  display: block;
+}
+
+.gallery__slider-title {
+  -webkit-text-decoration: uppercase;
+  text-decoration: uppercase;
+  color: #f8f8f8;
+  margin-top: auto;
+  text-align: center;
+}
+
+.gallery__slider-par {
+  color: #f8f8f8;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: auto;
+}
+
+.gallery__preview {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.advantages {
+  min-height: 645px;
+  background-image: url("../img/fon-3.jpg");
+}
+
+.empty {
+  min-height: 118px;
+  background-color: #fffcf1;
+}
+
+.relationship {
+  background-color: #305b7b;
+  min-height: 167px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews {
+  min-height: 865px;
+  background-color: #fffcf1;
 }
 
 .footer {
