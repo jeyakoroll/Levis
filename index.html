@@ -48,7 +48,6 @@
 				</div>
 				
 			</div>
-			
 		</header>
 		<!-- history -->
 		<section class="history">
@@ -86,6 +85,7 @@
 			<div class="row">
 				<div class="gallery__title">Галерея</div>
 				<ul class="gallery__slider">
+					<li class="gallery__slider-arrow"></li>
 					<li class="gallery__slider-item" >
 						<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
 						<div class="gallery__slider-text">
@@ -125,27 +125,32 @@
 				<!-- gallery preview -->
 				<div class="gallery__preview">
 					<aside class="gallery__preview-show">
-						<img src="" alt="" class="gallery__preview-pic">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item"></li>
-							<li class="gallery__preview-item"></li>
-							<li class="gallery__preview-item"></li>
-							<li class="gallery__preview-item"></li>
-							<li class="gallery__preview-item"></li>
+							<li class="gallery__preview-item" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" style="background-image: url('public/img/01/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
 					<aside class="gallery__descr">
 						<ul class="gallery__descr-list">
-							<li class="gallery__descr-title">Сапоги LEVI`S LEATHER JAX BOOTS</li>
+							<li class="gallery__descr-title">САПОГИ LEVI`S LEATHER JAX BOOTS</li>
 							<li class="gallery__descr-item">Цвет: ЧЕРНЫЙ</li>
 							<li class="gallery__descr-item">Материал внешней отделки:  НАТУРАЛЬНАЯ  КОЖА  ЯКА</li>
 							<li class="gallery__descr-item">Материал  внутренней отделки: НАТУРАЛЬНЫЙ МЕХ</li>
 							<li class="gallery__descr-item">Подошва:  ТЕХНОЛОГИЧНАЯ ТЕРМОРЕЗИНА</li>
 							<li class="gallery__descr-item">Размеры : 40,41,42,43,44,45</li>
-							<li class="gallery__descr-item">
+							<li class="gallery__descr-season">
 								Сезон : зима
-								<span class="gallery__descr-old_prise">500 б.р.</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
 								<span class="gallery__descr-prise">149 б.р.</span>
 							</li>
 							<li class="gallery__descr-button">
@@ -160,7 +165,7 @@
 		<!-- advantages -->
 		<section class="advantages">
 			<div class="row">
-				<p class="advantages__title"></p>
+				<p class="advantages__title">Преимущества</p>
 				<ul class="advantages__list">
 					<li class="advantages__list-item"></li>
 				</ul>
