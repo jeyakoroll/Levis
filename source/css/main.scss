@@ -227,6 +227,12 @@ ul {
 	}
 }
 
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
 p {
 	padding: 0;
 	margin: 0;
@@ -999,6 +1005,9 @@ a {
   @include laptop {
     width: 90%;
   }
+  @include tablets {
+    justify-content: center;
+  }
   @include phones {
     padding: 5vh 0;
     justify-content: center;
@@ -1006,6 +1015,9 @@ a {
 }
 
 .relationship__item:nth-child(odd) {
+  @include tablets {
+    margin-right: 40px;
+  }
   @include phones {
     margin-right: 60px;
   }
@@ -1186,11 +1198,199 @@ a {
 
 
 
-
 // footer
 .footer {
 	flex: 0 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  // justify-content: center;
 	min-height: 580px;
 	width: 100%;
 	background-color: #1a1a1a;
+}
+
+.footer .row {
+  width: 90%;
+  height: 100%;
+  padding-top: 95px;
+  padding-left: 55px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__form {
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__form-title {
+  @include opensans(ruso);
+  font-size: 24px;
+  color: #e5e5e5;
+  margin-bottom: 45px;
+  align-self: flex-start;
+}
+
+.footer__form-input {
+  display: flex;
+}
+
+.footer__form-pic {
+  height: 245px;
+  width: 195px;
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  margin-right: 40px;
+  .gallery__slider-text {
+    height: 100%;
+    @include vertical-gradient;
+    font-size: 30px; 
+    line-height: 30px;
+    cursor: pointer;
+    .gallery__slider-par {
+      margin-top: 7px;
+      font-size: 14px;
+    } 
+    .br {
+      display: block;
+    }
+  }
+  @include desktop {
+    height: 200px;
+    width: 160px;
+    .gallery__slider-text {
+      font-size: 20px;
+    }
+  }
+  @include laptop {
+    height: 170px;
+    width: 125px;
+    line-height: 20px;
+    .gallery__slider-text {
+      .gallery__slider-title {
+        font-size: 18px;
+      }
+      .gallery__slider-par {
+        margin-top: 4px;
+        font-size: 8px;
+      }
+    }
+  }
+  @include tablets {
+    height: 120px;
+    width: 85px;
+    line-height: 5px;
+    .gallery__slider-text {
+      .gallery__slider-title {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .gallery__slider-par {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+// STYLE FOR THE FORM THAT WE ADD THROUGH JS 
+
+  .footer__form-text {
+    
+  }
+
+  .footer__form-data {
+    width: 290px;
+    border-radius: 5px;
+    color: #f8f8f8;
+    background-color: transparent;
+    height: 50px;
+    padding-left: 30px;
+    font-size: 16px;
+    &::placeholder {
+      color: #f8f8f8;
+      font-size: 14px;
+      @include opensans(semi);
+    }
+  }
+
+  .footer__form-size {
+    width: 290px;
+    height: 45px;
+    color: #f8f8f8;
+    background-color: transparent;
+    padding-left: 30px;
+    padding-right: 17px;
+  }
+
+  .footer__form-order {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__form-button {
+    width: 290px;
+    height: 45px;
+    border-radius: 5px;
+    border: 0 none;
+    color: #f8f8f8;
+    background-color: #305b7b;
+    font-size: 16px;
+    @include opensans(semi);
+    margin-bottom: 200px;
+  }
+
+  .footer__form-select {
+    width: 290px;
+    height: 45px;
+    // border-radius: 10px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    // line-height: 1em;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
+  }
+
+
+
+.footer__size {
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  margin-left: 165px;
+}
+
+.footer__size-title {
+  @include opensans(ruso);
+  font-size: 24px;
+  color: #e5e5e5;
+  margin-bottom: 45px;
+}
+
+.footer__size-table {
+  position: relative;
+  display: flex;
+  width: 260px;
+  height: 290px;
+}
+
+.footer__size-pic {
+  @include absolute-center;
+  max-width: 99%;
+  max-height: 99%;
+  background: url('../img/table-size.jpg') no-repeat top center;;
 }

@@ -286,19 +286,42 @@
 
 	<!-- Site footer -->
 	<footer class="footer">
-		<div class="footer__form">
-			<div class="footer__form-title">Форма заказа</div>
-			<div class="footer__form-input">
-				<div class="footer__form-pic"></div>
-				<!-- form -->
+		<div class="row">
+			<div class="footer__form">
+				<div class="footer__form-title">Форма заказа</div>
+				<div class="footer__form-input">
+					<div class="footer__form-pic">
+						<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+						<div class="gallery__slider-text">
+							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+							<p class="gallery__slider-par">коричневый</p>
+						</div>
+					</div>
+					<div class="footer__form-text">
+						<form class="order-form" action="" method="POST" accepted-charset="utf-8">
+		         <input type="hidden" name="country" value="name="country" ">
+		         <input type="hidden" name="key" value="key">
+		         	<div class="form-group">
+								<input type="text" class="form-control" name="name_first" id="name_first" required>
+							</div>
+		         <div class="form-group">
+								<input type="text" class="form-control" name="name_last" id="name_last" required>
+							</div>
+							<div class="form-group">
+								<button type="submit" name="submit">Отправить заказ</button>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="footer__size">
-			<div class="footer__size-title"></div>
-			<div class="footer__size-table">
-				<div class="footer__size-pic"></div>
+			<div class="footer__size">
+				<div class="footer__size-title">Узнать свой размер</div>
+				<div class="footer__size-table">
+					<div class="footer__size-pic"></div>
+				</div>
 			</div>
-		</div>
+		</div><!-- footer row -->
+		
 	</footer>
 	<!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
