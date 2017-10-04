@@ -322,15 +322,23 @@ a {
   }
   @include tablets {
     flex-direction: column;
+    width: 105%;
   }
 }
 
 .header__item {
   // flex: 1;
+  // height: 40px;
+  // padding: 0 15px;
   border-bottom: 1px solid transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
   &:hover {
     border-bottom: 1px solid #fff;
-  }
+      // background-color: rgba(255,255,255,0.2);
+    }
   @include laptop {
     padding: 10px 15px;
     &:hover {
@@ -346,7 +354,16 @@ a {
       background-color: transparent;
     }
   }
+}
 
+.header__link {
+  @include opensans(semi);
+  font-size: 1.6rem;
+  color: #fffcf1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .header__logo {
@@ -358,16 +375,6 @@ a {
   }
   @include laptop {
     justify-content: center;
-  }
-}
-
-.header__link {
-	@include opensans(semi);
-	font-size: 1.6rem;
-	color: #fffcf1;
-  &:hover {
-    color: #fff;
-    text-decoration: none;
   }
 }
 
@@ -585,9 +592,9 @@ a {
   @include more_desktop {
     justify-content: flex-start;
   }
-  // @include desktop {
-  //   justify-content: flex-start;
-  // }  
+  @include desktop {
+    justify-content: center;
+  }  
   // @include laptop {
   //   justify-content: flex-start;
   // }  
@@ -605,6 +612,18 @@ a {
   cursor: pointer;
 }
 
+// .gallery__slider-par {
+//   transform: translate(-200px, 200px);
+//   transition: all 0.2s ease-in-out;
+//   opacity: 0;
+// }
+
+// .gallery__slider-title {
+//   transform: translate(200px, -200px);
+//   transition: all 0.2s ease-in-out;
+//   opacity: 0;
+// }
+
 .gallery__slider-item {
   height: 245px;
   width: 195px;
@@ -614,8 +633,10 @@ a {
   justify-content: flex-end;
   margin: 0 10px;
   box-shadow: 0px 0px 12px #999;
+  overflow: hidden;
   &:hover {
     .gallery__slider-text {
+      // transition: height 100ms ease-in-out;
       height: 100%;
       @include vertical-gradient;
       font-size: 30px; 
@@ -624,9 +645,17 @@ a {
       .gallery__slider-par {
         margin-top: 7px;
         font-size: 14px;
+        // transform: translate(0px,0px);
+        // transition-delay: 0.1s;
+        // opacity: 1; 
       } 
       .br {
         display: block;
+      }
+      .gallery__slider-title {
+        // transform: translate(0px,0px); 
+        // transition-delay: 0.05s;
+        // opacity: 1;
       }
     }
   }
