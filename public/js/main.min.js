@@ -1,5 +1,42 @@
 $(document).ready(function () {
 	
+
+	// output of the description in the catalog
+	const buy = '<button class="gallery__descr-button_buy">Купить</button>',
+				descr = '<button class="gallery__descr-button_size">Узнать свой размер</button>',
+				el = $('.descr_js');
+	// output for mobile
+	const dataFirst = [
+					'Сапоги LEVI`S LEATHER JAX BOOTS',
+					'149 б.р.',
+					'черный',
+					'натуральная кожа яка',
+					'натуральный мех',
+					'технологичная терморезина',
+					'40,41,42,43,44,45',
+					'зима'
+					 // buy,
+					 // descr
+				];
+
+				for( text of dataFirst ) {
+					console.log(text);
+					for ( data of el ) {
+						// console.log(el.data);
+					}
+				}
+
+				for ( data of el ) {
+					console.log(data);
+				}
+
+
+
+
+	// output for desktop
+	
+
+	// form at bottom of page
 	  $( '.footer__form-text input[name=name_last]' ).closest( '.form-group' ).after(
         '<div class="form-group"><select class="form-control" style="border-radius: 5px;" required name="size"><option selected="selected" value="" class="">Размер (полномерки)</option><option value="xs" class="">40</option><option value="x" class="">41</option><option value="red" class="">42</option><option value="grey" class="">43</option><option value="grey" class="">44</option><option value="grey" class="">45</option></select></div>'
     );
@@ -11,6 +48,5 @@ $(document).ready(function () {
     $( '.footer__form-text select[name=size]' ).addClass( 'footer__form-select' );
     $('.footer__form-text input[name=name_first]').attr("placeholder","Имя");
     $('.footer__form-text input[name=name_last]').attr("placeholder","Телефон");
-
 
 });
