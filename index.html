@@ -25,11 +25,11 @@
 						<img src="public/img/logo-top.png" alt="" class="header__pic">
 					</a>
 					<ul class="header__nav">
-						<li class="header__item" ><a href="#" class="header__link" data-text="О нас"><span>О нас</span></a></li>
-						<li class="header__item" ><a href="#" class="header__link" data-text="Галерея"><span>Галерея</span></a></li>
-						<li class="header__item" ><a href="#" class="header__link" data-text="Преимущества"><span>Преимущества</span></a></li>
-						<li class="header__item" data-text="Оплата и доставка"><a href="#" class="header__link" data-text="Оплата и доставка"><span>Оплата и доставка</span></a></li>
-						<li class="header__item" ><a href="#" class="header__link" data-text="Отзывы"><span>Отзывы</span></a></li>
+						<li class="header__item" ><a href="#about" class="header__link header__link-about" data-text="О нас"><span>О нас</span></a></li>
+						<li class="header__item" ><a href="#gallery" class="header__link header__link-gallery" data-text="Галерея"><span>Галерея</span></a></li>
+						<li class="header__item" ><a href="#advantages" class="header__link header__link-advantages" data-text="Преимущества"><span>Преимущества</span></a></li>
+						<li class="header__item" data-text="Оплата и доставка"><a href="#buy" class="header__link header__link-buy" data-text="Оплата и доставка"><span>Оплата и доставка</span></a></li>
+						<li class="header__item" ><a href="#reviews" class="header__link header__link-reviews" data-text="Отзывы"><span>Отзывы</span></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -50,13 +50,13 @@
 			</div>
 		</header>
 		<!-- history -->
-		<section class="history">
-			<div class="row">
+		<section class="history" >
+			<div class="row" data-section="about">
 				<p class="history__text-title_laptop">Как все начиналось</p>
 				<aside class="history__pic">
 					<img src="public/img/history-pic.png" alt="" class="history__pic-item" />
 				</aside>
-				<aside class="history__text">
+				<aside class="history__text" >
 					<p class="history__text-title">Как все начиналось</p>
 					<p class="history__text-item">Будущий изобретатель джинсов Лейб Штраус родился в 1829 году 
 					в Баварии в многодетной еврейской семье. Он рано лишился отца, 
@@ -83,18 +83,15 @@
 		<!-- gallery -->
 		<section class="gallery">
 			<div class="row">
-				<div class="gallery__title">Галерея</div>
+				<div class="gallery__title" data-section="gallery">Галерея</div>
 				<ul class="gallery__slider">
 					<li class="gallery__slider-arrow"></li>
 					<li class="gallery__slider-item" >
 						<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
 						<div class="gallery__slider-text">
-							<!-- hover -->
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
-							<!-- staitc -->
-<!-- 							<p class="gallery__slider-title_st">LEATHER JAX BOOTS</p>
-							<p class="gallery__slider-par_st">коричневый</p> -->
+							<div class="plus"><img src="public/img/plus.png" alt=""></div>
 						</div>
 					</li>
 					<li class="gallery__slider-item" >
@@ -102,6 +99,7 @@
 						<div class="gallery__slider-text">
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
+							<div class="plus"><img src="public/img/plus.png" alt=""></div>
 						</div>
 					</li>
 					<li class="gallery__slider-item" >
@@ -109,6 +107,7 @@
 						<div class="gallery__slider-text">
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
+							<div class="plus"><img src="public/img/plus.png" alt=""></div>
 						</div>
 					</li>
 					<li class="gallery__slider-item" >
@@ -116,6 +115,7 @@
 						<div class="gallery__slider-text">
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
+							<div class="plus"><img src="public/img/plus.png" alt=""></div>
 						</div>
 					</li>
 					<li class="gallery__slider-item" >
@@ -123,6 +123,7 @@
 						<div class="gallery__slider-text">
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
+							<div class="plus"><img src="public/img/plus.png" alt=""></div>
 						</div>
 					</li>
 				</ul>
@@ -133,11 +134,11 @@
 							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/01/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/01/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/01/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/01/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/01/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -178,9 +179,9 @@
 			</div>
 		</section><!-- gallery -->
 		<!-- advantages -->
-		<section class="advantages">
+		<section class="advantages" >
 			<div class="row">
-				<p class="advantages__title">Преимущества</p>
+				<p class="advantages__title" data-section="advantages">Преимущества</p>
 				<div class="advantages__content">
 					<ul class="advantages__list">
 						<li class="advantages__list-item">
@@ -217,7 +218,7 @@
 		<!-- empty -->
 		<section class="empty"></section>
 		<!-- relationship -->
-		<section class="relationship">
+		<section class="relationship" data-section="buy">
 			<div class="row">
 				<div class="relationship__item">
 					<div class="relationship__icon" style="background: url('public/img/sprite_ico.png') no-repeat top left;"></div>
@@ -238,9 +239,9 @@
 			</div>
 		</section><!-- relationship -->
 		<!-- reviews -->
-		<section class="reviews">
+		<section class="reviews" >
 			<div class="row">
-				<div class="reviews__title">Отзывы о товаре</div>
+				<div class="reviews__title" data-section="reviews">Отзывы о товаре</div>
 				<div class="reviews__items">
 					<ul class="reviews__items-list">
 						<li class="reviews__items-elem">

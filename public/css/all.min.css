@@ -653,6 +653,16 @@ a {
   }
 }
 
+.gallery__slider-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
 .gallery__slider-item {
   height: 245px;
   width: 195px;
@@ -671,6 +681,10 @@ a {
   -webkit-box-shadow: 0px 0px 12px #999;
   box-shadow: 0px 0px 12px #999;
   overflow: hidden;
+}
+
+.gallery__slider-item:hover .plus {
+  display: none;
 }
 
 .gallery__slider-item:hover .gallery__slider-text {
@@ -801,6 +815,47 @@ a {
   .gallery__slider-item:hover .gallery__slider-text .br {
     display: block;
   }
+}
+
+.plus {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .plus {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 9px;
+    width: 25px;
+    height: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #fff;
+  }
+}
+
+.plus img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  max-height: 70%;
+  max-width: 70%;
+  left: -0.5px;
 }
 
 .gallery__slider-pic {
@@ -957,7 +1012,7 @@ a {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  width: 330px;
+  width: 417px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -969,6 +1024,12 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+  .gallery__preview-list {
+    width: 330px;
+  }
 }
 
 .gallery__preview-item {
@@ -2073,6 +2134,7 @@ a {
 
   .footer__form-pic .gallery__slider-text {
     padding-top: 10px;
+    position: relative;
   }
 
   .footer__form-pic .gallery__slider-title {
