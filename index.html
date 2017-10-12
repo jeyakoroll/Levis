@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="public/css/normalize.css">
 	<link rel="stylesheet" href="public/css/fonts.css">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="public/css/slick.css"> -->
+	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="public/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="public/css/all.min.css">
 </head>
 <body class="body">
@@ -37,8 +40,14 @@
 				<div class="row">
 					<aside class="header__bottom-aside">
 						<div class="header__bottom-title">
-							<p>Одни из самых прочных</p>
-							<p>ботинок в вашей коллекции</p>
+							<p class="header__bottom-title_desktop">Одни из самых прочных</p>
+							<p class="header__bottom-title_desktop">ботинок в вашей коллекции</p>
+							<div class="header__bottom-mobile">
+								<a href="#" class="header__bottom-mobile_logo"><img src="public/img/logo-top.png" alt=""></a>
+								<p class="header__bottom-title_mobile">Одни из самых прочных</p>
+								<p class="header__bottom-title_mobile">ботинок в вашей</p>
+								<p class="header__bottom-title_mobile">коллекции</p>
+							</div>
 						</div>
 						<div class="header__bottom-text">
 							<p>Выполнены с учетом проверенных временем</p>
@@ -84,51 +93,452 @@
 		<section class="gallery">
 			<div class="row">
 				<div class="gallery__title" data-section="gallery">Галерея</div>
-				<ul class="gallery__slider">
-					<li class="gallery__slider-arrow"></li>
-					<li class="gallery__slider-item" >
-						<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
-						<div class="gallery__slider-text">
-							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
-							<p class="gallery__slider-par">коричневый</p>
-							<div class="plus"><img src="public/img/plus.png" alt=""></div>
-						</div>
+			<!-- gallery for phone -->
+				<ul class="gallery__mobile">
+
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery" class="br_gallery" /> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery"> 
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
-					<li class="gallery__slider-item" >
-						<div class="gallery__slider-pic" style="background: url('public/img/02/01.jpg') no-repeat top/cover;"></div>
-						<div class="gallery__slider-text">
-							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
-							<p class="gallery__slider-par">коричневый</p>
-							<div class="plus"><img src="public/img/plus.png" alt=""></div>
-						</div>
+
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
-					<li class="gallery__slider-item" >
-						<div class="gallery__slider-pic" style="background: url('public/img/03/02.jpg') no-repeat top/cover;"></div>
-						<div class="gallery__slider-text">
-							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
-							<p class="gallery__slider-par">коричневый</p>
-							<div class="plus"><img src="public/img/plus.png" alt=""></div>
-						</div>
+					
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
-					<li class="gallery__slider-item" >
-						<div class="gallery__slider-pic" style="background: url('public/img/04/01.jpg') no-repeat top/cover;"></div>
-						<div class="gallery__slider-text">
-							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
-							<p class="gallery__slider-par">коричневый</p>
-							<div class="plus"><img src="public/img/plus.png" alt=""></div>
-						</div>
+
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
-					<li class="gallery__slider-item" >
-						<div class="gallery__slider-pic" style="background: url('public/img/05/01.jpg') no-repeat top/cover;"></div>
-						<div class="gallery__slider-text">
-							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
-							<p class="gallery__slider-par">коричневый</p>
-							<div class="plus"><img src="public/img/plus.png" alt=""></div>
-						</div>
+
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
+					
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					
+					<li class="mob__slid">
+						<ul class="mob__slid-list">
+							<li class="gallery__slider-item" data-preview="01" >
+								<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+								<div class="gallery__slider-text_mobile">
+									<div class="gallery_slider-text_wrap">
+										<p class="gallery__slider-title_mobile">LEATHER JAX BOOTS</p>
+										<p class="gallery__slider-par_mobile">коричневый</p>
+									</div>
+									<div class="plus"><img src="public/img/plus.png" alt=""></div>
+								</div>
+							</li>
+							<!-- mob descr -->
+							<li  data-preview="01" class="gallery__mobile-descr">
+								<div class="gallery__mobile-header">
+									<p class="gallery__slider-text_active">Описание</p>
+									<div class="minus"><img src="public/img/minus.png" alt=""></div>
+								</div>
+								<ul class="gallery__descr-list">
+									<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+									<li class="gallery__descr-item">Цвет: 
+										<span class="lower descr_js" data-descr="2">черный</span>
+									</li>
+									<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+									</li>
+									<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+										<span class="lower descr_js" data-descr="4">натуральный мех</span>
+									</li>
+									<li class="gallery__descr-item">Подошва: 
+										<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+									</li>
+									<li class="gallery__descr-item">Размеры: 
+										<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+									</li>
+									<li class="gallery__descr-season">
+										<span class="bolder">Сезон</span> : 
+										<span class="lower descr_js" data-descr="7">зима</span>
+										<span class="gallery__descr-old_prise">
+											500 б.р.
+											<span class="gallery__descr-redline"></span>
+										</span>
+										<span class="gallery__descr-prise">149 б.р.</span>
+									</li>
+									<li class="gallery__descr-button">
+										<button class="gallery__descr-button_buy">Купить</button>
+										<button class="gallery__descr-button_size">Узнать свой размер</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
 				</ul>
+
+
+			<div class="gallery__slider-wrap" id="gallery-slider">
+				<div id="owl-next" class="gallery__slider-arrow owl-next"></div>
+				<div class="gallery__item-wrap">
+					<ul id="slider-gallery" class="gallery__slider owl-carousel">
+						<!-- <li class="gallery__slider-arrow"></li> -->
+						<li class="gallery__slider-item" data-preview="01" >
+							<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+
+						<li class="gallery__slider-item" data-preview="02" >
+							<div class="gallery__slider-pic" style="background: url('public/img/02/01.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+						<li class="gallery__slider-item" data-preview="03" >
+							<div class="gallery__slider-pic" style="background: url('public/img/03/02.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+						<li class="gallery__slider-item" data-preview="04" >
+							<div class="gallery__slider-pic" style="background: url('public/img/04/01.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+						<li class="gallery__slider-item" data-preview="05" >
+							<div class="gallery__slider-pic" style="background: url('public/img/05/01.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+						<li class="gallery__slider-item" data-preview="06" >
+							<div class="gallery__slider-pic" style="background: url('public/img/06/01.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+						<li class="gallery__slider-item" data-preview="07" >
+							<div class="gallery__slider-pic" style="background: url('public/img/07/01.jpg') no-repeat top/cover;"></div>
+							<div class="gallery__slider-text">
+								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
+								<p class="gallery__slider-par">коричневый</p>
+								<div class="plus"><img src="public/img/plus.png" alt=""></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+
 				<!-- gallery preview -->
-				<div class="gallery__preview">
+
+				 <div class="gallery__preview active__prev" data-preview="01">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
 							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
@@ -144,25 +554,25 @@
 					<!-- description of gallery -->
 					<aside class="gallery__descr">
 						<ul class="gallery__descr-list">
-							<li class="gallery__descr-title descr_js" data-descr="1"></li>
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
 							<li class="gallery__descr-item">Цвет: 
-								<span class="lower descr_js" data-descr="2"></span>
+								<span class="lower descr_js" data-descr="2">черный</span>
 							</li>
-							<li class="gallery__descr-item">Материал внешней отделки: 
-								<span class="lower descr_js" data-descr="3"></span>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
 							</li>
-							<li class="gallery__descr-item">Материал  внутренней отделки: 
-								<span class="lower descr_js" data-descr="4"></span>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
 							</li>
 							<li class="gallery__descr-item">Подошва: 
-								<span class="lower descr_js" data-descr="5"></span> 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
 							</li>
 							<li class="gallery__descr-item">Размеры: 
-								<span class="lower descr_js" data-descr="6"></span>
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
 							</li>
 							<li class="gallery__descr-season">
 								<span class="bolder">Сезон</span> : 
-								<span class="lower descr_js" data-descr="7"></span>
+								<span class="lower descr_js" data-descr="7">зима</span>
 								<span class="gallery__descr-old_prise">
 									500 б.р.
 									<span class="gallery__descr-redline"></span>
@@ -176,6 +586,300 @@
 						</ul>
 					</aside>
 				</div>
+				<div class="gallery__preview" data-preview="02">
+					<aside class="gallery__preview-show">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
+						<ul class="gallery__preview-list">
+							<li class="gallery__preview-item" data-src="public/img/02/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+						</ul>
+					</aside>
+					<!-- description of gallery -->
+					<aside class="gallery__descr">
+						<ul class="gallery__descr-list">
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+							<li class="gallery__descr-item">Цвет: 
+								<span class="lower descr_js" data-descr="2">черный</span>
+							</li>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+							</li>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
+							</li>
+							<li class="gallery__descr-item">Подошва: 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+							</li>
+							<li class="gallery__descr-item">Размеры: 
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+							</li>
+							<li class="gallery__descr-season">
+								<span class="bolder">Сезон</span> : 
+								<span class="lower descr_js" data-descr="7">зима</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
+								<span class="gallery__descr-prise">149 б.р.</span>
+							</li>
+							<li class="gallery__descr-button">
+								<button class="gallery__descr-button_buy">Купить</button>
+								<button class="gallery__descr-button_size">Узнать свой размер</button>
+							</li>
+						</ul>
+					</aside>
+				</div>
+				<div class="gallery__preview" data-preview="03">
+					<aside class="gallery__preview-show">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
+						<ul class="gallery__preview-list">
+							<li class="gallery__preview-item" data-src="public/img/03/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+						</ul>
+					</aside>
+					<!-- description of gallery -->
+					<aside class="gallery__descr">
+						<ul class="gallery__descr-list">
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+							<li class="gallery__descr-item">Цвет: 
+								<span class="lower descr_js" data-descr="2">черный</span>
+							</li>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+							</li>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
+							</li>
+							<li class="gallery__descr-item">Подошва: 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+							</li>
+							<li class="gallery__descr-item">Размеры: 
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+							</li>
+							<li class="gallery__descr-season">
+								<span class="bolder">Сезон</span> : 
+								<span class="lower descr_js" data-descr="7">зима</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
+								<span class="gallery__descr-prise">149 б.р.</span>
+							</li>
+							<li class="gallery__descr-button">
+								<button class="gallery__descr-button_buy">Купить</button>
+								<button class="gallery__descr-button_size">Узнать свой размер</button>
+							</li>
+						</ul>
+					</aside>
+				</div>
+				<div class="gallery__preview" data-preview="04">
+					<aside class="gallery__preview-show">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
+						<ul class="gallery__preview-list">
+							<li class="gallery__preview-item" data-src="public/img/04/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+						</ul>
+					</aside>
+					<!-- description of gallery -->
+					<aside class="gallery__descr">
+						<ul class="gallery__descr-list">
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+							<li class="gallery__descr-item">Цвет: 
+								<span class="lower descr_js" data-descr="2">черный</span>
+							</li>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+							</li>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
+							</li>
+							<li class="gallery__descr-item">Подошва: 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+							</li>
+							<li class="gallery__descr-item">Размеры: 
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+							</li>
+							<li class="gallery__descr-season">
+								<span class="bolder">Сезон</span> : 
+								<span class="lower descr_js" data-descr="7">зима</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
+								<span class="gallery__descr-prise">149 б.р.</span>
+							</li>
+							<li class="gallery__descr-button">
+								<button class="gallery__descr-button_buy">Купить</button>
+								<button class="gallery__descr-button_size">Узнать свой размер</button>
+							</li>
+						</ul>
+					</aside>
+				</div>
+				<div class="gallery__preview" data-preview="05">
+					<aside class="gallery__preview-show">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
+						<ul class="gallery__preview-list">
+							<li class="gallery__preview-item" data-src="public/img/05/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+						</ul>
+					</aside>
+					<!-- description of gallery -->
+					<aside class="gallery__descr">
+						<ul class="gallery__descr-list">
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+							<li class="gallery__descr-item">Цвет: 
+								<span class="lower descr_js" data-descr="2">черный</span>
+							</li>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+							</li>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
+							</li>
+							<li class="gallery__descr-item">Подошва: 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+							</li>
+							<li class="gallery__descr-item">Размеры: 
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+							</li>
+							<li class="gallery__descr-season">
+								<span class="bolder">Сезон</span> : 
+								<span class="lower descr_js" data-descr="7">зима</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
+								<span class="gallery__descr-prise">149 б.р.</span>
+							</li>
+							<li class="gallery__descr-button">
+								<button class="gallery__descr-button_buy">Купить</button>
+								<button class="gallery__descr-button_size">Узнать свой размер</button>
+							</li>
+						</ul>
+					</aside>
+				</div>
+				<div class="gallery__preview" data-preview="06">
+					<aside class="gallery__preview-show">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
+						<ul class="gallery__preview-list">
+							<li class="gallery__preview-item" data-src="public/img/06/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+						</ul>
+					</aside>
+					<!-- description of gallery -->
+					<aside class="gallery__descr">
+						<ul class="gallery__descr-list">
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+							<li class="gallery__descr-item">Цвет: 
+								<span class="lower descr_js" data-descr="2">черный</span>
+							</li>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+							</li>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
+							</li>
+							<li class="gallery__descr-item">Подошва: 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+							</li>
+							<li class="gallery__descr-item">Размеры: 
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+							</li>
+							<li class="gallery__descr-season">
+								<span class="bolder">Сезон</span> : 
+								<span class="lower descr_js" data-descr="7">зима</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
+								<span class="gallery__descr-prise">149 б.р.</span>
+							</li>
+							<li class="gallery__descr-button">
+								<button class="gallery__descr-button_buy">Купить</button>
+								<button class="gallery__descr-button_size">Узнать свой размер</button>
+							</li>
+						</ul>
+					</aside>
+				</div>
+				<div class="gallery__preview" data-preview="07">
+					<aside class="gallery__preview-show">
+						<div class="gallery__preview-screen">
+							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+						</div>
+						<ul class="gallery__preview-list">
+							<li class="gallery__preview-item" data-src="public/img/07/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+						</ul>
+					</aside>
+					<!-- description of gallery -->
+					<aside class="gallery__descr">
+						<ul class="gallery__descr-list">
+							<li class="gallery__descr-title descr_js" data-descr="1">Сапоги LEVI`S LEATHER <br class="br_gallery"/> JAX BOOTS</li>
+							<li class="gallery__descr-item">Цвет: 
+								<span class="lower descr_js" data-descr="2">черный</span>
+							</li>
+							<li class="gallery__descr-item">Материал внешней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="3">натуральная кожа яка</span>
+							</li>
+							<li class="gallery__descr-item">Материал  внутренней отделки: <br class="br_gallery">
+								<span class="lower descr_js" data-descr="4">натуральный мех</span>
+							</li>
+							<li class="gallery__descr-item">Подошва: 
+								<span class="lower descr_js" data-descr="5">технологичная терморезина</span> 
+							</li>
+							<li class="gallery__descr-item">Размеры: 
+								<span class="lower descr_js" data-descr="6">40,41,42,43,44,45</span>
+							</li>
+							<li class="gallery__descr-season">
+								<span class="bolder">Сезон</span> : 
+								<span class="lower descr_js" data-descr="7">зима</span>
+								<span class="gallery__descr-old_prise">
+									500 б.р.
+									<span class="gallery__descr-redline"></span>
+								</span>
+								<span class="gallery__descr-prise">149 б.р.</span>
+							</li>
+							<li class="gallery__descr-button">
+								<button class="gallery__descr-button_buy">Купить</button>
+								<button class="gallery__descr-button_size">Узнать свой размер</button>
+							</li>
+						</ul>
+					</aside>
+				</div>
+
+				</div><!-- gallery preview -->
+
+
+				
+				
 			</div>
 		</section><!-- gallery -->
 		<!-- advantages -->
@@ -307,7 +1011,7 @@
 				<div class="footer__form-title">Форма заказа</div>
 				<div class="footer__form-input">
 					<div class="footer__form-pic">
-						<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+	 data-preview="01"					<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
 						<div class="gallery__slider-text">
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
@@ -341,6 +1045,9 @@
 	</footer>
 	<!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
+	<!-- <script src="public/js/slick.min.js"></script> -->
+	<script src="public/js/owl.carousel.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 	<!-- <script src="public/js/bootstrap.min.js"></script> -->
 	<script src="public/js/main.min.js"></script>
 </body>
