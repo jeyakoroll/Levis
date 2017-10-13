@@ -24,6 +24,7 @@ $(document).ready(function () {
   owlReviews.owlCarousel({
       loop:true,
       margin: 500,
+      items: 1,
       center: true,
       dots: true,
       nav: true,
@@ -39,17 +40,21 @@ $(document).ready(function () {
       responsive:{
           0:{
               items:1,
+              margin: 50,
               loop:true,
+              center: true,
               dots: true
           },
           500:{
               items:1,
               loop:true,
+              center: true,
               dots: true
           },
           768:{
               items:1,
               loop:true,
+              center: true,
               dots: true
           }
       }
@@ -88,10 +93,6 @@ $(document).ready(function () {
         preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr');
 
         if ( !preview.hasClass('open') ) {
-        // preview.animate({
-        // height: 0
-        // }, 300 );
-        // } else {
         that.css({
             'opacity': '0',
             'display': 'none'
@@ -121,6 +122,7 @@ $(document).ready(function () {
        'opacity': '1',
        'display': 'flex'
     	});
+      preview.toggleClass('open');
 		}
   })
 
@@ -199,7 +201,7 @@ $(document).ready(function () {
     function showFormWatch (e) {
         e.preventDefault();
         showForm($(this).data('href'), true);
-        // console.log($(this).data('href'))
+        console.log($(this).data('href'))
     }
 
     // showReviews(window.location.hash, false);
@@ -260,10 +262,11 @@ $(document).ready(function () {
     }
 
     function showForm(section, isAnimate) {
+        console.log(section);
         var 
-            direction = section,
-            reqSection = $('.footer__form').filter('[data-section="' + direction +'"]'),
-            reqSectionPos = reqSection.offset().top;
+            reqSection = $('.footer__form').filter('[data-section="' + section +'"]');
+            console.log(reqSection);
+           var reqSectionPos = reqSection.offset().top;
         console.log(reqSection)
         if(isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);

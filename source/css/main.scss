@@ -523,8 +523,12 @@ a {
   justify-content: center;
   overflow: hidden;
   @include laptop {
-    padding-top: 8vh;
-    padding-bottom: 4vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  @include tablets {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -874,7 +878,7 @@ a {
     top: 10.5%;
   }
   @include main(830px) {
-    top: 7.5%;
+    top: 8.5%;
     left: -8%;
   }
   @include tablets {
@@ -1200,6 +1204,9 @@ a {
 }
 
 .gallery__descr-list {
+  @include main(830px) {
+    padding-left: 30px;
+  }
   @include tablets {
     display: flex;
     flex-flow: column wrap;
@@ -1631,6 +1638,12 @@ a {
 .reviews__items {
   width: 100%;
   display: flex;
+  @include main(994px) {
+    width: 800px;
+  }
+  @include laptop {
+    width: 700px;
+  }
   @include tablets {
     display: none;
   }

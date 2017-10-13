@@ -517,8 +517,15 @@ a {
 
 @media screen and (max-width: 992px) {
   .history {
-    padding-top: 8vh;
-    padding-bottom: 4vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .history {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1025,7 +1032,7 @@ a {
 
 @media screen and (max-width: 830px) {
   .gallery__slider-arrow {
-    top: 7.5%;
+    top: 8.5%;
     left: -8%;
   }
 }
@@ -1460,6 +1467,12 @@ a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .gallery__descr-list {
+    padding-left: 30px;
   }
 }
 
@@ -2130,6 +2143,18 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 994px) {
+  .reviews__items {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .reviews__items {
+    width: 700px;
+  }
 }
 
 @media screen and (max-width: 768px) {
