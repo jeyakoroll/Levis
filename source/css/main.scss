@@ -1692,6 +1692,9 @@ a {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  @include phones {
+    width: 400px;
+  }
 }
 
 .reviews__slider {
@@ -1920,7 +1923,7 @@ a {
   justify-content: flex-end;
   margin: 0 10px;
   overflow: hidden;
-  &:hover {
+  // &:hover {
     .gallery__slider-text {
       height: 100%;
       @include vertical-gradient;
@@ -1935,21 +1938,21 @@ a {
         display: block;
       }
     }
-  }
+  // }
   @include desktop {
     height: 245px;
     width: 195px;
-    &:hover {
+    // &:hover {
       .gallery__slider-text {
         font-size: 20px;
       }
-    }
+    // }
   }
   @include laptop {
     height: 175px;
     width: 135px;
     line-height: 20px;
-    &:hover {
+    // &:hover {
       .gallery__slider-text {
         .gallery__slider-title {
           font-size: 18px;
@@ -1959,14 +1962,14 @@ a {
           font-size: 8px;
         }
       }
-    }
+    // }
   }
   @include main(930px) {
     height: 120px;
     width: 85px;
     line-height: 5px;
     display: none;
-    &:hover {
+    // &:hover {
       .gallery__slider-text {
         .gallery__slider-title {
           font-size: 12px;
@@ -1978,11 +1981,11 @@ a {
           font-size: 10px;
         }
       }
-    }
+    // }
     @include tablets {
       display: flex;
       margin-bottom: 60px;
-      &:hover{ 
+      // &:hover{ 
         .gallery__slider-text {
           .gallery__slider-title {
             line-height: 30px;
@@ -1995,7 +1998,7 @@ a {
           font-size: 18px !important;
           margin-top: 60px !important;
         }
-      }
+      // }
     }
   }
   @include tablets {
@@ -2012,7 +2015,7 @@ a {
     .gallery__slider-par {
       font-size: 18px;
     }
-    &:hover {
+    // &:hover {
       .gallery__slider-text {
         height: 100% !important;
         @include vertical-gradient;
@@ -2030,7 +2033,7 @@ a {
           display: block;
         }
       }
-    }
+    // }
   }
 
 }
@@ -2077,7 +2080,7 @@ a {
     background-color: #305b7b;
     font-size: 16px;
     @include opensans(semi);
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
     margin-top: 10%;
     &:hover {
       // transition: background-color 100ms;
@@ -2195,9 +2198,14 @@ a {
 //   }
 // }
 
-// .owl-carousel .owl-stage {
-//   margin-left: -500px;
-// }
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel .caption {
+  text-align: center;
+}
 
 .owl-dots {
   display: none;

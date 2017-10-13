@@ -39,22 +39,28 @@ $(document).ready(function () {
       responsiveClass:true,
       responsive:{
           0:{
-              items:1,
-              margin: 50,
-              loop:true,
+              items: 1,
+              margin: 200,
+              loop: true,
+              autoWidth: true,
+              autoplay: true,
               center: true,
-              dots: true
+              dots: false
           },
           500:{
               items:1,
-              loop:true,
+              loop: true,
+              autoWidth: true,
+              margin: 200,
               center: true,
-              dots: true
+              // autoWidth: false,
+              dots: false
           },
           768:{
               items:1,
               loop:true,
               center: true,
+              // autoWidth: false,
               dots: true
           }
       }
@@ -201,7 +207,6 @@ $(document).ready(function () {
     function showFormWatch (e) {
         e.preventDefault();
         showForm($(this).data('href'), true);
-        console.log($(this).data('href'))
     }
 
     // showReviews(window.location.hash, false);
@@ -212,7 +217,7 @@ $(document).ready(function () {
             reqSection = $('.history>.row').filter('[data-section="' + direction +'"]'),
             reqSectionPos = reqSection.offset().top;
 
-        if(isAnimate) {
+        if (isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }
     }
@@ -223,7 +228,7 @@ $(document).ready(function () {
             reqSection = $('.gallery__title').filter('[data-section="' + direction +'"]'),
             reqSectionPos = reqSection.offset().top;
 
-        if(isAnimate) {
+        if (isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }
     }
@@ -234,7 +239,7 @@ $(document).ready(function () {
             reqSection = $('.advantages__title').filter('[data-section="' + direction +'"]'),
             reqSectionPos = reqSection.offset().top;
 
-        if(isAnimate) {
+        if (isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }
     }
@@ -245,7 +250,7 @@ $(document).ready(function () {
             reqSection = $('.relationship').filter('[data-section="' + direction +'"]'),
             reqSectionPos = reqSection.offset().top;
 
-        if(isAnimate) {
+        if (isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }
     }
@@ -255,20 +260,18 @@ $(document).ready(function () {
             direction = section.replace(/#/, ''),
             reqSection = $('.reviews__title').filter('[data-section="' + direction +'"]'),
             reqSectionPos = reqSection.offset().top;
-        console.log(reqSection)
-        if(isAnimate) {
+
+        if (isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }
     }
 
     function showForm(section, isAnimate) {
-        console.log(section);
         var 
-            reqSection = $('.footer__form').filter('[data-section="' + section +'"]');
-            console.log(reqSection);
-           var reqSectionPos = reqSection.offset().top;
-        console.log(reqSection)
-        if(isAnimate) {
+            reqSection = $('.footer__form').filter('[data-section="' + section +'"]'),
+            reqSectionPos = reqSection.offset().top;
+
+        if (isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }
     }
