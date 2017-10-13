@@ -286,7 +286,11 @@ a {
 	height: 100vh;
 	width: 100%;
 	background: url('../img/fon-2.jpg') no-repeat center top/cover;
+  @include tablets {
+    height: 300px;
+  }
   @include phones {
+    height: 600px;
     background: url('../img/back-mobile2.jpg') no-repeat center top/cover; 
   }
 }
@@ -436,6 +440,12 @@ a {
   justify-content: center;
   @include desktop {
     padding-left: 0;
+  }
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: flex;
   }
 }
 
@@ -625,6 +635,7 @@ a {
   flex-flow: column wrap;
   min-height: 1135px;
   background-color: #fffcf1;
+  overflow: hidden;
   // overflow: hidden;
   @include laptop {
     min-height: auto;
@@ -728,6 +739,7 @@ a {
   margin-right: -10.7%;
   display: flex;
   height: 270px;
+  margin-bottom: 40px;
   margin-right: -200px;
   // margin-left: 85px;
   width: 1000px;
@@ -1200,7 +1212,7 @@ a {
   @include opensans(bold);
   color: #305b7b;
   margin-left: -30px;
-  margin-bottom: 46px;
+  margin-bottom: 28px;
   // align-self: center;
   display: flex;
   padding-left: 27px;
@@ -1241,13 +1253,16 @@ a {
 }
 
 .gallery__descr-season {
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 14px;
   @include opensans(jenya);
   margin-bottom: 30px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  @include desktop {
+    margin-top: 32px;
+  }
   @include laptop {
     margin-top: -10px;
     margin-bottom: 10px;
@@ -1586,6 +1601,7 @@ a {
   background-color: #fffcf1;
   display: flex;
   flex-flow: column wrap;
+  overflow: hidden;
   @include tablets {
     min-height: auto;
     padding-bottom: 70px;
@@ -1658,6 +1674,13 @@ a {
 }
 
 // reviews slider
+.reviews__slider-wrap {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 .reviews__slider {
   min-width: 735px;
   min-height: 310px;
@@ -1710,9 +1733,12 @@ a {
 
 .reviews__slider-item {
   font-size: 14px;
-  width: 270px;
+  width: 345px;
   margin-bottom: 5px;
   @include opensans(ital);
+  @include laptop {
+    width: 290px;
+  }
   @include tablets {
     font-size: 13px;
     margin-bottom: 11px;
@@ -1727,10 +1753,27 @@ a {
   justify-content: space-between;
   align-self: flex-start;
   margin-top: 5vh;
+  position: relative;
   @include tablets {
     width: 155px;
     align-self: center;
     margin-top: 1.5vh;
+  }
+  .owl-prev {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+  }
+  .owl-next {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
   }
 }
 
@@ -1738,25 +1781,23 @@ a {
   background: url('../img/arr-left.png') no-repeat;
   width: 27px;
   height: 27px;
-  cursor: pointer;
 }
 
 .right {
   background: url('../img/arr-right.png') no-repeat;
   width: 27px;
   height: 27px;
-  cursor: pointer;
 }
 
 .reviews__slider-pic {
   flex: 1;
-  background: url('../img/1-slide.jpg') no-repeat top/cover;
+  // background: url('../img/1-slide.jpg') no-repeat top/cover;
   border-radius: 10px;
   position: absolute;
-  width: 368px;
-  height: 309px;
-  top: -28px;
-  right: -44px;
+  width: 366px;
+  height: 310px;
+  top: -30px;
+  right: -45px;
   box-shadow: 0px 0px 12px #999;
   @include laptop {
     width: 300px;

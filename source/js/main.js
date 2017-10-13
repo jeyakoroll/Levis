@@ -11,11 +11,6 @@ $(document).ready(function () {
       nav: true,
       autoWidth: true,
       navContainer: '#owl-next',
-      // itemsDesktop : [1199,10],
-      // itemsDesktopSmall : [980,9],
-      // itemsTablet: [768,5],
-      // itemsTabletSmall: false,
-      // itemsMobile : [479,4]
       responsiveClass:true,
       responsive:{
           0:{
@@ -26,13 +21,39 @@ $(document).ready(function () {
       }
   });
 
-  // $('.one-time').slick({
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   adaptiveHeight: true
-  // });
+  owlReviews.owlCarousel({
+      loop:true,
+      margin: 500,
+      center: true,
+      dots: true,
+      nav: true,
+      autoWidth: true,
+      navContainer: '.reviews__slider-link',
+      dotsContainer: '.reviews__items-list',
+      // itemsDesktop : [1199,10],
+      // itemsDesktopSmall : [980,9],
+      // itemsTablet: [768,5],
+      // itemsTabletSmall: false,
+      // itemsMobile : [479,4]
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              loop:true,
+              dots: true
+          },
+          500:{
+              items:1,
+              loop:true,
+              dots: true
+          },
+          768:{
+              items:1,
+              loop:true,
+              dots: true
+          }
+      }
+  });
 	
 	// switching images in models area
 
@@ -44,7 +65,7 @@ $(document).ready(function () {
       if (target.hasClass('gallery__preview-item')) {
           var img = target.closest('.gallery__preview-show').find('.gallery__preview-pic');
           var src = target.data('src');
-          img.attr('src', src).hide().fadeIn(300);
+          img.attr('src', src).hide().fadeIn(200);
       }
   }
 
@@ -103,7 +124,23 @@ $(document).ready(function () {
 		}
   })
 
+  // descr for gallery slider
+  $('.gallery-item').click( function (e) {
+    e.preventDefault();
+    var 
+        tap = e.target,
+        that = $(this),
+        descr = that.closest('.gallery').find('.gallery-descr'),
+        dataThat = that.data('preview');
 
+        descr.each(function () {
+          var 
+              that = $(this),
+              dataDescr = that.data('preview');
+              that = (dataThat === dataDescr) ? that.addClass('active__prev').hide().fadeToggle(100) : that.removeClass('active__prev');
+        });
+
+  });
 
 
     // go to the menu area
@@ -150,6 +187,19 @@ $(document).ready(function () {
     function showReviewsWatch (e) {
         e.preventDefault();
         showReviews($(this).attr('href'), true);
+    }
+
+    // buy button
+    $('.gallery__descr-button_buy').on('click', showFormWatch);
+    $('.gallery__descr-button_buy').bind('tap', showFormWatch);
+    // size button
+    $('.gallery__descr-button_size').on('click', showFormWatch);
+    $('.gallery__descr-button_size').bind('tap', showFormWatch);
+
+    function showFormWatch (e) {
+        e.preventDefault();
+        showForm($(this).data('href'), true);
+        // console.log($(this).data('href'))
     }
 
     // showReviews(window.location.hash, false);
@@ -203,7 +253,18 @@ $(document).ready(function () {
             direction = section.replace(/#/, ''),
             reqSection = $('.reviews__title').filter('[data-section="' + direction +'"]'),
             reqSectionPos = reqSection.offset().top;
+        console.log(reqSection)
+        if(isAnimate) {
+            $('body, html').animate({scrollTop: reqSectionPos}, 500);
+        }
+    }
 
+    function showForm(section, isAnimate) {
+        var 
+            direction = section,
+            reqSection = $('.footer__form').filter('[data-section="' + direction +'"]'),
+            reqSectionPos = reqSection.offset().top;
+        console.log(reqSection)
         if(isAnimate) {
             $('body, html').animate({scrollTop: reqSectionPos}, 500);
         }

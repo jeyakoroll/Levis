@@ -141,8 +141,8 @@
 										<span class="gallery__descr-prise">149 б.р.</span>
 									</li>
 									<li class="gallery__descr-button">
-										<button class="gallery__descr-button_buy">Купить</button>
-										<button class="gallery__descr-button_size">Узнать свой размер</button>
+										<button data-href="form" class="gallery__descr-button_buy" id="form" >Купить</button>
+										<button data-href="form" class="gallery__descr-button_size" id="form" >Узнать свой размер</button>
 									</li>
 								</ul>
 							</li>
@@ -194,8 +194,8 @@
 										<span class="gallery__descr-prise">149 б.р.</span>
 									</li>
 									<li class="gallery__descr-button">
-										<button class="gallery__descr-button_buy">Купить</button>
-										<button class="gallery__descr-button_size">Узнать свой размер</button>
+										<button data-href="#form" class="gallery__descr-button_buy">Купить</button>
+										<button data-href="#form" class="gallery__descr-button_size">Узнать свой размер</button>
 									</li>
 								</ul>
 							</li>
@@ -470,12 +470,12 @@
 				</ul>
 
 
-			<div class="gallery__slider-wrap" id="gallery-slider">
+			<div class="gallery__slider-wrap" id="gallerreviews/y-rewr">
 				<div id="owl-next" class="gallery__slider-arrow owl-next"></div>
 				<div class="gallery__item-wrap">
 					<ul id="slider-gallery" class="gallery__slider owl-carousel">
 						<!-- <li class="gallery__slider-arrow"></li> -->
-						<li class="gallery__slider-item" data-preview="01" >
+						<li class="gallery__slider-item gallery-item" data-preview="01" >
 							<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -484,7 +484,7 @@
 							</div>
 						</li>
 
-						<li class="gallery__slider-item" data-preview="02" >
+						<li class="gallery__slider-item gallery-item" data-preview="02" >
 							<div class="gallery__slider-pic" style="background: url('public/img/02/01.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -492,7 +492,7 @@
 								<div class="plus"><img src="public/img/plus.png" alt=""></div>
 							</div>
 						</li>
-						<li class="gallery__slider-item" data-preview="03" >
+						<li class="gallery__slider-item gallery-item" data-preview="03" >
 							<div class="gallery__slider-pic" style="background: url('public/img/03/02.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -500,7 +500,7 @@
 								<div class="plus"><img src="public/img/plus.png" alt=""></div>
 							</div>
 						</li>
-						<li class="gallery__slider-item" data-preview="04" >
+						<li class="gallery__slider-item gallery-item" data-preview="04" >
 							<div class="gallery__slider-pic" style="background: url('public/img/04/01.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -508,7 +508,7 @@
 								<div class="plus"><img src="public/img/plus.png" alt=""></div>
 							</div>
 						</li>
-						<li class="gallery__slider-item" data-preview="05" >
+						<li class="gallery__slider-item gallery-item" data-preview="05" >
 							<div class="gallery__slider-pic" style="background: url('public/img/05/01.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -516,7 +516,7 @@
 								<div class="plus"><img src="public/img/plus.png" alt=""></div>
 							</div>
 						</li>
-						<li class="gallery__slider-item" data-preview="06" >
+						<li class="gallery__slider-item gallery-item" data-preview="06" >
 							<div class="gallery__slider-pic" style="background: url('public/img/06/01.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -524,7 +524,7 @@
 								<div class="plus"><img src="public/img/plus.png" alt=""></div>
 							</div>
 						</li>
-						<li class="gallery__slider-item" data-preview="07" >
+						<li class="gallery__slider-item gallery-item" data-preview="07" >
 							<div class="gallery__slider-pic" style="background: url('public/img/07/01.jpg') no-repeat top/cover;"></div>
 							<div class="gallery__slider-text">
 								<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
@@ -538,7 +538,7 @@
 
 				<!-- gallery preview -->
 
-				 <div class="gallery__preview active__prev" data-preview="01">
+				 <div class="gallery__preview active__prev gallery-descr" data-preview="01">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
 							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
@@ -586,17 +586,17 @@
 						</ul>
 					</aside>
 				</div>
-				<div class="gallery__preview" data-preview="02">
+				<div class="gallery__preview gallery-descr" data-preview="02">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
-							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+							<img src="public/img/02/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" data-src="public/img/02/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/02/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/02/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/02/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/02/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/01.jpg" style="background-image: url('public/img/02/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/02.jpg" style="background-image: url('public/img/02/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/03.jpg" style="background-image: url('public/img/02/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/04.jpg" style="background-image: url('public/img/02/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/02/05.jpg" style="background-image: url('public/img/02/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -634,17 +634,17 @@
 						</ul>
 					</aside>
 				</div>
-				<div class="gallery__preview" data-preview="03">
+				<div class="gallery__preview gallery-descr" data-preview="03">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
-							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+							<img src="public/img/03/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" data-src="public/img/03/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/03/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/03/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/03/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/03/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/01.jpg" style="background-image: url('public/img/03/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/02.jpg" style="background-image: url('public/img/03/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/03.jpg" style="background-image: url('public/img/03/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/04.jpg" style="background-image: url('public/img/03/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/03/05.jpg" style="background-image: url('public/img/03/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -682,17 +682,17 @@
 						</ul>
 					</aside>
 				</div>
-				<div class="gallery__preview" data-preview="04">
+				<div class="gallery__preview gallery-descr" data-preview="04">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
-							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+							<img src="public/img/04/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" data-src="public/img/04/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/04/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/04/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/04/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/04/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/01.jpg" style="background-image: url('public/img/04/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/02.jpg" style="background-image: url('public/img/04/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/03.jpg" style="background-image: url('public/img/04/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/04.jpg" style="background-image: url('public/img/04/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/04/05.jpg" style="background-image: url('public/img/04/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -730,17 +730,17 @@
 						</ul>
 					</aside>
 				</div>
-				<div class="gallery__preview" data-preview="05">
+				<div class="gallery__preview gallery-descr" data-preview="05">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
-							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+							<img src="public/img/05/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" data-src="public/img/05/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/05/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/05/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/05/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/05/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/01.jpg" style="background-image: url('public/img/05/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/02.jpg" style="background-image: url('public/img/05/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/03.jpg" style="background-image: url('public/img/05/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/04.jpg" style="background-image: url('public/img/05/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/05/05.jpg" style="background-image: url('public/img/05/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -778,17 +778,17 @@
 						</ul>
 					</aside>
 				</div>
-				<div class="gallery__preview" data-preview="06">
+				<div class="gallery__preview gallery-descr" data-preview="06">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
-							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+							<img src="public/img/06/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" data-src="public/img/06/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/06/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/06/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/06/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/06/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/01.jpg" style="background-image: url('public/img/06/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/02.jpg" style="background-image: url('public/img/06/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/03.jpg" style="background-image: url('public/img/06/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/04.jpg" style="background-image: url('public/img/06/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/06/05.jpg" style="background-image: url('public/img/06/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -826,17 +826,17 @@
 						</ul>
 					</aside>
 				</div>
-				<div class="gallery__preview" data-preview="07">
+				<div class="gallery__preview gallery-descr" data-preview="07">
 					<aside class="gallery__preview-show">
 						<div class="gallery__preview-screen">
-							<img src="public/img/01/01.jpg" alt="" class="gallery__preview-pic">
+							<img src="public/img/07/01.jpg" alt="" class="gallery__preview-pic">
 						</div>
 						<ul class="gallery__preview-list">
-							<li class="gallery__preview-item" data-src="public/img/07/01.jpg" style="background-image: url('public/img/01/01.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/07/02.jpg" style="background-image: url('public/img/01/02.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/07/03.jpg" style="background-image: url('public/img/01/03.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/07/04.jpg" style="background-image: url('public/img/01/04.jpg')"></li>
-							<li class="gallery__preview-item" data-src="public/img/07/05.jpg" style="background-image: url('public/img/01/05.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/01.jpg" style="background-image: url('public/img/07/01.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/02.jpg" style="background-image: url('public/img/07/02.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/03.jpg" style="background-image: url('public/img/07/03.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/04.jpg" style="background-image: url('public/img/07/04.jpg')"></li>
+							<li class="gallery__preview-item" data-src="public/img/07/05.jpg" style="background-image: url('public/img/07/05.jpg')"></li>
 						</ul>
 					</aside>
 					<!-- description of gallery -->
@@ -949,55 +949,144 @@
 				<div class="reviews__items">
 					<ul class="reviews__items-list">
 						<li class="reviews__items-elem">
-							<div class="reviews__items-pic" style="background: url('public/img/reviews/1-rew.jpg')"></div>
+							<div class="reviews__items-pic" style="background: url('public/img/reviews/1-rewm.jpg') center center"></div>
 							<p class="reviews__items-name">Анатолий</p>
 							<p class="reviews__items-name">Сывак</p>
 						</li>
 						<li class="reviews__items-elem">
-							<div class="reviews__items-pic" style="background: url('public/img/reviews/2-rew.jpg')"></div>
+							<div class="reviews__items-pic" style="background: url('public/img/reviews/2-rewm.jpg') center center"></div>
 							<p class="reviews__items-name">Леонид</p>
 							<p class="reviews__items-name">Шатайло</p>
 						</li>
 						<li class="reviews__items-elem">
-							<div class="reviews__items-pic" style="background: url('public/img/reviews/3-rew.jpg')"></div>
+							<div class="reviews__items-pic" style="background: url('public/img/reviews/3-rewm.jpg') center center"></div>
 							<p class="reviews__items-name">Станислав</p>
 							<p class="reviews__items-name">Никитюк</p>
 						</li>
 						<li class="reviews__items-elem">
-							<div class="reviews__items-pic" style="background: url('public/img/reviews/4-rew.jpg')"></div>
+							<div class="reviews__items-pic" style="background: url('public/img/reviews/4-rewm.jpg') center center"></div>
 							<p class="reviews__items-name">Ямир</p>
 							<p class="reviews__items-name">Тадашкевич</p>
 						</li>
 						<li class="reviews__items-elem">
-							<div class="reviews__items-pic" style="background: url('public/img/reviews/5-rew.jpg')"></div>
+							<div class="reviews__items-pic" style="background: url('public/img/reviews/5-rewm.jpg') center center"></div>
 							<p class="reviews__items-name">Ярослав</p>
 							<p class="reviews__items-name">Волошн</p>
 						</li>
 						<li class="reviews__items-elem">
-							<div class="reviews__items-pic" style="background: url('public/img/reviews/6-rew.jpg')"></div>
+							<div class="reviews__items-pic" style="background: url('public/img/reviews/6-rewm.jpg') center center"></div>
 							<p class="reviews__items-name">Иван</p>
 							<p class="reviews__items-name">Дмитрук</p>
 						</li>
 					</ul>
 				</div> <!-- reviews items -->
 				<!-- reviews slider -->
-				<div class="reviews__slider">
-					<div class="reviews__slider-text">
-						<p class="reviews__slider-name">Дмитрий Фартушняк</p>
-						<p class="reviews__slider-item">Действительно качественный товар 
-							из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
-							а они как новые!
-						</p>
-						<p class="reviews__slider-item">
-							В конце Декабря решил заказать и себе пару. Спасибо продавцам.
-						</p>
-						<div class="reviews__slider-link">
-							<div class="left"></div>
-							<div class="right"></div>
+<!-- owl-carousel" id="slider-reviews" -->
+				<div class="reviews__slider-wrap owl-carousel" id="slider-reviews" >
+					<div class="reviews__slider">
+						<div class="reviews__slider-text">
+							<p class="reviews__slider-name">Дмитрий Фартушняк</p>
+							<p class="reviews__slider-item">Действительно качественный товар 
+								из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
+								а они как новые!
+							</p>
+							<p class="reviews__slider-item">
+								В конце Декабря решил заказать и себе пару. Спасибо продавцам.
+							</p>
+							<div class="reviews__slider-link">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
 						</div>
-					</div>
-					<div class="reviews__slider-pic"></div>
-				</div><!-- reviews slider -->
+						<div class="reviews__slider-pic" style="background: url('public/img/reviews/1-rew.jpg') no-repeat top/cover;"></div>
+					</div><!-- reviews slider -->
+					<div class="reviews__slider">
+						<div class="reviews__slider-text">
+							<p class="reviews__slider-name">Дмитрий Фартушняк</p>
+							<p class="reviews__slider-item">Действительно качественный товар 
+								из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
+								а они как новые!
+							</p>
+							<p class="reviews__slider-item">
+								В конце Декабря решил заказать и себе пару. Спасибо продавцам.
+							</p>
+							<div class="reviews__slider-link">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+						</div>
+						<div class="reviews__slider-pic" style="background: url('public/img/reviews/2-rew.jpg') no-repeat top/cover;"></div>
+					</div><!-- reviews slider -->
+					<div class="reviews__slider">
+						<div class="reviews__slider-text">
+							<p class="reviews__slider-name">Дмитрий Фартушняк</p>
+							<p class="reviews__slider-item">Действительно качественный товар 
+								из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
+								а они как новые!
+							</p>
+							<p class="reviews__slider-item">
+								В конце Декабря решил заказать и себе пару. Спасибо продавцам.
+							</p>
+							<div class="reviews__slider-link">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+						</div>
+						<div class="reviews__slider-pic" style="background: url('public/img/reviews/3-rew.jpg') no-repeat top/cover;"></div>
+					</div><!-- reviews slider -->
+					<div class="reviews__slider">
+						<div class="reviews__slider-text">
+							<p class="reviews__slider-name">Дмитрий Фартушняк</p>
+							<p class="reviews__slider-item">Действительно качественный товар 
+								из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
+								а они как новые!
+							</p>
+							<p class="reviews__slider-item">
+								В конце Декабря решил заказать и себе пару. Спасибо продавцам.
+							</p>
+							<div class="reviews__slider-link">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+						</div>
+						<div class="reviews__slider-pic" style="background: url('public/img/reviews/4-rew.jpg') no-repeat top/cover;"></div>
+					</div><!-- reviews slider -->
+					<div class="reviews__slider">
+						<div class="reviews__slider-text">
+							<p class="reviews__slider-name">Дмитрий Фартушняк</p>
+							<p class="reviews__slider-item">Действительно качественный товар 
+								из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
+								а они как новые!
+							</p>
+							<p class="reviews__slider-item">
+								В конце Декабря решил заказать и себе пару. Спасибо продавцам.
+							</p>
+							<div class="reviews__slider-link">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+						</div>
+						<div class="reviews__slider-pic" style="background: url('public/img/reviews/5-rew.jpg') no-repeat top/cover;"></div>
+					</div><!-- reviews slider -->
+					<div class="reviews__slider">
+						<div class="reviews__slider-text">
+							<p class="reviews__slider-name">Дмитрий Фартушняк</p>
+							<p class="reviews__slider-item">Действительно качественный товар 
+								из натуральной кожи. Заказываю уже вторую пару, первую пару закал осенью,
+								а они как новые!
+							</p>
+							<p class="reviews__slider-item">
+								В конце Декабря решил заказать и себе пару. Спасибо продавцам.
+							</p>
+							<div class="reviews__slider-link">
+								<div class="left"></div>
+								<div class="right"></div>
+							</div>
+						</div>
+						<div class="reviews__slider-pic" style="background: url('public/img/reviews/6-rew.jpg') no-repeat top/cover;"></div>
+					</div><!-- reviews slider -->
+				</div>
+
 			</div>
 			
 		</section>
@@ -1007,11 +1096,11 @@
 	<!-- Site footer -->
 	<footer class="footer">
 		<div class="row">
-			<div class="footer__form">
+			<div class="footer__form" data-section="form">
 				<div class="footer__form-title">Форма заказа</div>
 				<div class="footer__form-input">
-					<div class="footer__form-pic">
-	 data-preview="01"					<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
+					<div class="footer__form-pic" data-preview="01">
+	 					<div class="gallery__slider-pic" style="background: url('public/img/01/01.jpg') no-repeat top/cover;"></div>
 						<div class="gallery__slider-text">
 							<p class="gallery__slider-title">LEATHER <span><br class="br"></span> JAX <span><br class="br"></span> BOOTS</p>
 							<p class="gallery__slider-par">коричневый</p>
