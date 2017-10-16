@@ -202,6 +202,13 @@ $(document).ready(function () {
 
     function showFormWatch (e) {
         e.preventDefault();
+        var src = $('.active__prev .gallery__preview-pic').attr('src'),
+            bottomPic = $('.img-footer'),
+            changePic = a => `background: url('${a}') no-repeat top/cover;`;
+            
+            bottomPic.attr('style', changePic(src));
+        // console.log(changePic(src))
+
         showForm($(this).data('href'), true);
     }
 
