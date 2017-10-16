@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var owlGallery = $("#slider-gallery"),
       owlReviews = $("#slider-reviews");
-  
+
 
   owlGallery.owlCarousel({
       loop:true,
@@ -60,7 +60,8 @@ $(document).ready(function () {
           }
       }
   });
-	
+
+
 	// switching images in models area
 
   $( '.gallery__preview-item' ).on('click', slideHandler );
@@ -144,53 +145,6 @@ $(document).ready(function () {
         });
 
   });
-
-
-    // go to the menu area
-    // about area
-    $('.header__link-about').on('click', showAboutWatch);
-    $('.header__link-about').bind('tap', showAboutWatch);
-
-    function showAboutWatch (e) {
-        e.preventDefault();
-        showAbout($(this).attr('href'), true);
-    }    
-
-    // about area
-    $('.header__link-gallery').on('click', showGalleryWatch);
-    $('.header__link-gallery').bind('tap', showGalleryWatch);
-
-    function showGalleryWatch (e) {
-        e.preventDefault();
-        showGallery($(this).attr('href'), true);
-    }    
-
-  // advantages area
-    $('.header__link-advantages').on('click', showAdvantagesWatch);
-    $('.header__link-advantages').bind('tap', showAdvantagesWatch);
-
-    function showAdvantagesWatch (e) {
-        e.preventDefault();
-        showAdvantages($(this).attr('href'), true);
-    }    
-
-    // buy area
-    $('.header__link-buy').on('click', showBuyWatch);
-    $('.header__link-buy').bind('tap', showBuyWatch);
-
-    function showBuyWatch (e) {
-        e.preventDefault();
-        showBuy($(this).attr('href'), true);
-    }    
-
-    // reviews area
-    $('.header__link-reviews').on('click', showReviewsWatch);
-    $('.header__link-reviews').bind('tap', showReviewsWatch);
-
-    function showReviewsWatch (e) {
-        e.preventDefault();
-        showReviews($(this).attr('href'), true);
-    }
     
     // GO TO FORM ON DESKTOP
     // buy button
@@ -202,90 +156,33 @@ $(document).ready(function () {
 
     function showFormWatch (e) {
         e.preventDefault();
-        var src = $('.active__prev .gallery__preview-pic').attr('src'),
+        var 
+            src = $('.active__prev .gallery__preview-pic').attr('src'),
             bottomPic = $('.img-footer'),
             changePic = a => `background: url('${a}') no-repeat top/cover;`;
-            
+
             bottomPic.attr('style', changePic(src));
-        // console.log(changePic(src))
 
         showForm($(this).data('href'), true);
     }
 
     // GO TO FORM AND SIZE TABLE ON MOBILE
     // buy button
-    $('.mob__go-to-form').on('click', showFormMobile);
-    $('.mob__go-to-form').bind('tap', showFormMobile);
-    // size button
-    $('.mob__go-to-size').on('click', showSizeMobile);
-    $('.mob__go-to-size').bind('tap', showSizeMobile);
+  $('.mob__go-to-form').on('click', showFormMobile);
+  $('.mob__go-to-form').bind('tap', showFormMobile);
+  // size button
+  $('.mob__go-to-size').on('click', showSizeMobile);
+  $('.mob__go-to-size').bind('tap', showSizeMobile);
 
-    function showSizeMobile (e) {
-        e.preventDefault();
-        showPhoneSize($(this).data('size'), true);
-    }
+  function showSizeMobile (e) {
+      e.preventDefault();
+      showPhoneSize($(this).data('size'), true);
+  }
 
-    function showFormMobile (e) {
-        e.preventDefault();
-        showPhoneForm($(this).data('form'), true);
-    }
-
-    // showReviews(window.location.hash, false);
-
-    function showAbout(section, isAnimate) {
-        var 
-            direction = section.replace(/#/, ''),
-            reqSection = $('.history>.row').filter('[data-section="' + direction +'"]'),
-            reqSectionPos = reqSection.offset().top;
-
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
-
-    function showGallery(section, isAnimate) {
-        var 
-            direction = section.replace(/#/, ''),
-            reqSection = $('.gallery__title').filter('[data-section="' + direction +'"]'),
-            reqSectionPos = reqSection.offset().top;
-
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
-
-    function showAdvantages(section, isAnimate) {
-        var 
-            direction = section.replace(/#/, ''),
-            reqSection = $('.advantages__title').filter('[data-section="' + direction +'"]'),
-            reqSectionPos = reqSection.offset().top;
-
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
-
-    function showBuy(section, isAnimate) {
-        var 
-            direction = section.replace(/#/, ''),
-            reqSection = $('.relationship').filter('[data-section="' + direction +'"]'),
-            reqSectionPos = reqSection.offset().top;
-
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
-
-    function showReviews(section, isAnimate) {
-        var 
-            direction = section.replace(/#/, ''),
-            reqSection = $('.reviews__title').filter('[data-section="' + direction +'"]'),
-            reqSectionPos = reqSection.offset().top;
-
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
+  function showFormMobile (e) {
+      e.preventDefault();
+      showPhoneForm($(this).data('form'), true);
+  }
 
     function showForm(section, isAnimate) {
         var 
@@ -297,25 +194,71 @@ $(document).ready(function () {
         }
     }
 
-    function showPhoneForm(section, isAnimate) {
-        var 
-            reqSection = $('.footer__form-title').filter('[data-section="' + section +'"]'),
-            reqSectionPos = reqSection.offset().top;
+  function showPhoneForm(section, isAnimate) {
+      var 
+          reqSection = $('.footer__form-title').filter('[data-section="' + section +'"]'),
+          reqSectionPos = reqSection.offset().top;
 
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
+      if (isAnimate) {
+          $('body, html').animate({scrollTop: reqSectionPos}, 500);
+      }
+  }
 
-    function showPhoneSize(section, isAnimate) {
-        var 
-            reqSection = $('.footer__size-title').filter('[data-section="' + section +'"]'),
-            reqSectionPos = reqSection.offset().top;
+  function showPhoneSize(section, isAnimate) {
+      var 
+          reqSection = $('.footer__size-title').filter('[data-section="' + section +'"]'),
+          reqSectionPos = reqSection.offset().top;
 
-        if (isAnimate) {
-            $('body, html').animate({scrollTop: reqSectionPos}, 500);
-        }
-    }
+      if (isAnimate) {
+          $('body, html').animate({scrollTop: reqSectionPos}, 400);
+      }
+  }
 
+  // sticky navigation
+  $('.header__link').on('click', function(e) {
+    e.preventDefault();
+
+    showSection($(this).attr('href'), true); 
+  });
+
+  showSection(window.location.hash, false);
+ 
 });
+
+$(window).scroll(function() {
+  checkSection();
+});
+
+function showSection(section, isAnimate) {
+  var 
+      direction = section.replace(/#/, ''),
+      reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+      reqSectionPos = reqSection.offset().top + 1;
+console.log(reqSectionPos);
+      if (isAnimate) {
+        $('body, html').animate({scrollTop: reqSectionPos}, 500);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+}
+
+function checkSection() {
+  $('.section').each((function() {
+    var 
+        that = $(this),
+        topEdge = that.offset().top,
+        bottomEdge = topEdge + that.height(),
+        wScroll = $(window).scrollTop();
+
+        if (topEdge < wScroll && bottomEdge > wScroll ) {
+          var
+              currentId = that.data('section'),
+              reqLink = $('.header__link').filter('[href="#' + currentId + '"]');
+
+          reqLink.closest('.header__item').addClass('active__tab').siblings().removeClass('active__tab');
+
+              window.location.hash = currentId;
+        }
+  }));
+}
 
