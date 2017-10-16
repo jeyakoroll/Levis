@@ -51,10 +51,11 @@ $(document).ready(function () {
               // autoWidth: false,
               dots: false
           },
-          768:{
+          720:{
               items:1,
               loop:true,
-              // center: true,
+              autoWidth: true,
+              center: true,
               // autoWidth: false,
               dots: true
           }
@@ -91,26 +92,28 @@ $(document).ready(function () {
 
     // show mobile description
     $('.gallery__slider-text_mobile').click( function() {
-    var that = $(this),
-        preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr');
+      var 
+          that = $(this),
+          preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr');
 
-        if ( !preview.hasClass('open') ) {
-        that.css({
-            'opacity': '0',
-            'display': 'none'
-        });
-        preview.stop(true, true).animate({
-        height: preview.get(0).scrollHeight
-        }, 300, function(){
-            preview.height('auto');
-        });
-        }
-        preview.toggleClass('open');
+      if ( !preview.hasClass('open') ) {
+      that.css({
+          'opacity': '0',
+          'display': 'none'
+      });
+      preview.stop(true, true).animate({
+      height: preview.get(0).scrollHeight
+      }, 300, function(){
+          preview.height('auto');
+      });
+      }
+      preview.toggleClass('open');
     });
 		
     // hide mobile descr
     $('.gallery__mobile-header').on('click', function() {
-      var that = $(this),
+      var 
+          that = $(this),
     			preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr'),
     			mobileText = $(this).closest('.mob__slid-list').find('.gallery__slider-text_mobile');
 
@@ -141,7 +144,10 @@ $(document).ready(function () {
           var 
               that = $(this),
               dataDescr = that.data('preview');
-              that = (dataThat === dataDescr) ? that.addClass('active__prev').hide().fadeToggle(100) : that.removeClass('active__prev');
+              // that = (dataThat === dataDescr) ? that.addClass('active__prev').hide().fadeToggle(100).siblings().removeClass('active__prev') : console.info('');
+              if (dataThat === dataDescr) {
+                that.addClass('active__prev').hide().fadeToggle(100).siblings().removeClass('active__prev');
+              }
         });
 
   });
@@ -174,15 +180,23 @@ $(document).ready(function () {
   $('.mob__go-to-size').on('click', showSizeMobile);
   $('.mob__go-to-size').bind('tap', showSizeMobile);
 
+  function showFormMobile (e) {
+      e.preventDefault();
+      var   
+            that = $(this),
+            src = that.closest('.mob__slid-list').find('.gallery__slider-pic').attr('style'),
+            bottomPic = $('.img-footer');
+
+            bottomPic.attr('style', src);
+
+      showPhoneForm($(this).data('form'), true);
+  }
+
   function showSizeMobile (e) {
       e.preventDefault();
       showPhoneSize($(this).data('size'), true);
   }
 
-  function showFormMobile (e) {
-      e.preventDefault();
-      showPhoneForm($(this).data('form'), true);
-  }
 
     function showForm(section, isAnimate) {
         var 
@@ -200,13 +214,13 @@ $(document).ready(function () {
           reqSectionPos = reqSection.offset().top;
 
       if (isAnimate) {
-          $('body, html').animate({scrollTop: reqSectionPos}, 500);
+          $('body, html').animate({scrollTop: reqSectionPos}, 400);
       }
   }
 
   function showPhoneSize(section, isAnimate) {
       var 
-          reqSection = $('.footer__size-title').filter('[data-section="' + section +'"]'),
+          reqSection = $('.footer').filter('[data-section="' + section +'"]'),
           reqSectionPos = reqSection.offset().top;
 
       if (isAnimate) {
@@ -257,7 +271,7 @@ function checkSection() {
 
           reqLink.closest('.header__item').addClass('active__tab').siblings().removeClass('active__tab');
 
-              window.location.hash = currentId;
+          window.location.hash = currentId;
         }
   }));
 }

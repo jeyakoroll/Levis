@@ -8,7 +8,7 @@
 			font-weight: normal;
 	}
 
-@font-face {
+	@font-face {
 			font-family: "OpenSansRegular";
 			src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
 			src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
@@ -17,6 +17,17 @@
 			font-style: normal;
 			font-weight: normal;
 	}
+
+	@font-face {
+			font-family: "LoraBold";
+			src: url("../fonts/LoraBold/LoraBold.eot");
+			src: url("../fonts/LoraBold/LoraBold.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/LoraBold/LoraBold.woff") format("woff"),
+			url("../fonts/LoraBold/LoraBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
 
 	@font-face {
 			font-family: "OpenSansItalic";

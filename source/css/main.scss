@@ -20,8 +20,12 @@
 		font-family: 'RussoOneRegular';
 	}
 
-	@if $style == ubuntu {
-		font-family: 'UbuntuCondensedRegular';
+  @if $style == ubuntu {
+    font-family: 'UbuntuCondensedRegular';
+  }	
+
+  @if $style == lora {
+		font-family: 'LoraBold';
 	}
 }
 
@@ -287,11 +291,11 @@ a {
 	width: 100%;
 	background: url('../img/fon-2.jpg') no-repeat center top/cover;
   @include tablets {
-    height: 300px;
+    height: 340px;
+    background: url('../img/back-mobile2.jpg') no-repeat center top/cover; 
   }
   @include phones {
     height: 600px;
-    background: url('../img/back-mobile2.jpg') no-repeat center top/cover; 
   }
 }
 
@@ -306,10 +310,11 @@ a {
   justify-content: center;  
   @include laptop {
     width: 100%;
-    // min-height: 0;
+    min-height: 0;
+    height: 46px;
     // height: 50px;
   }
-  @include phones {
+  @include tablets {
     display: none;
     // background-color: transparent;
   }
@@ -346,7 +351,7 @@ a {
   @include laptop {
     flex-direction: row;
     margin: 0 auto;
-    padding-bottom: 1.5vh;
+    // padding-bottom: 1.5vh;
   }
   @include tablets {
     flex-direction: column;
@@ -377,19 +382,23 @@ a {
       background-color: rgba(255,255,255,.15);
     }
   }
-  @include tablets {
-    padding: 5px 0px 0;
-    &:hover {
-      // padding: 5px 0 0;
-      border-bottom: 1px solid #fff;
-      background-color: transparent;
-    }
-  }
+  // @include tablets {
+  //   padding: 5px 0px 0;
+  //   &:hover {
+  //     // padding: 5px 0 0;
+  //     border-bottom: 1px solid #fff;
+  //     background-color: transparent;
+  //   }
+  // }
 }
 
 .active__tab {
   border-bottom: 1px solid #fff;
   // background-color: rgba(255,255,255,.15);
+  @include laptop {
+    border-bottom: 1px solid transparent;
+    background-color: rgba(255,255,255,.15);
+  }
 }
 
 .header__link {
@@ -456,7 +465,7 @@ a {
     padding-left: 0;
   }
   @include tablets {
-    display: none;
+    // display: none;
   }
   @include phones {
     display: flex;
@@ -489,9 +498,16 @@ a {
   @include laptop {
     width: 100%;
     height: 100%;
+    margin-top: 50%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+  }
+  @include tablets {
+    margin-top: 20%;
+  }
+  @include phones {
+    margin-top: 0;
   }
 }
 
@@ -700,8 +716,12 @@ a {
   margin: 0 auto;
 }
 
-.gallery__mobile {
-  
+.gallery__descr-prise_mob {
+  font-size: 18px;
+  @include opensans(lora);
+  color: #d64949;
+  margin-left: 35%;
+  margin-bottom: 10px;
 }
 
 .gallery__mobile-header {
@@ -757,7 +777,7 @@ a {
   margin-right: -10.7%;
   display: flex;
   height: 270px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-right: -200px;
   // margin-left: 85px;
   width: 1000px;
@@ -1048,6 +1068,7 @@ a {
   // top:100%;
   height: 100%;
   color: #f8f8f8;
+  line-height: 50px;
   width:100%;
   transition: transform 250ms;
   // vertical-align: bottom;
@@ -1173,7 +1194,7 @@ a {
   align-items: center;
   margin-right: 80px;
   @include desktop {
-    margin-right: 4%;
+    margin-right: 7%;
   }
   @include main(829px) {
     display: none;
@@ -1287,6 +1308,7 @@ a {
   }
   @include tablets {
     padding-left: 18%;
+    margin-bottom: 5px;
   }
 }
 
@@ -1294,6 +1316,9 @@ a {
   font-size: 14px;
   @include opensans(jenya);
   margin-bottom: 30px;
+  @include desktop {
+    margin-bottom: 19px;
+  }
   @include laptop {
     margin-bottom: 15px;
   }
@@ -1484,6 +1509,7 @@ a {
   }
   @include phones {
     padding-top: 40px;
+    padding-left: 15px;
   }
 }
 
@@ -2128,6 +2154,7 @@ a {
     order: 1;
   }
   @include tablets {
+    width: 100%;
     order: -1;
     margin-left: -2%;
   }
