@@ -1075,37 +1075,13 @@ a {
   -webkit-box-shadow: 0px 0px 12px #999;
   box-shadow: 0px 0px 12px #999;
   overflow: hidden;
-}
-
-.gallery__slider-item:hover .gallery__slider-text {
-  height: 100%;
-  background: #f16f5c;
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), color-stop(100%, rgba(0, 0, 0, 0.83)));
-  background: -webkit-gradient(linear, left top, left bottom, from(#f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), to(rgba(0, 0, 0, 0.83)));
-  background: linear-gradient(to bottom, #f16f5c 0%, white 0%, rgba(250, 250, 250, 0.83) 2%, rgba(0, 0, 0, 0.83) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#000000', GradientType=0 );
-  font-size: 30px;
-  line-height: 30px;
   cursor: pointer;
-}
-
-.gallery__slider-item:hover .gallery__slider-text .gallery__slider-par {
-  margin-top: 7px;
-  font-size: 14px;
-}
-
-.gallery__slider-item:hover .gallery__slider-text .br {
-  display: block;
 }
 
 @media screen and (max-width: 1200px) {
   .gallery__slider-item {
     height: 200px;
     width: 160px;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text {
-    font-size: 20px;
   }
 }
 
@@ -1115,15 +1091,6 @@ a {
     width: 125px;
     line-height: 20px;
   }
-
-  .gallery__slider-item:hover .gallery__slider-text .gallery__slider-title {
-    font-size: 18px;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text .gallery__slider-par {
-    margin-top: 4px;
-    font-size: 8px;
-  }
 }
 
 @media screen and (max-width: 830px) {
@@ -1131,17 +1098,6 @@ a {
     height: 120px;
     width: 85px;
     line-height: 5px;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text .gallery__slider-title {
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text .gallery__slider-par {
-    font-size: 10px;
   }
 }
 
@@ -1165,40 +1121,6 @@ a {
   .gallery__slider-item .gallery__slider-par {
     font-size: 18px;
   }
-
-  .gallery__slider-item:hover .gallery__slider-text {
-    height: 67px;
-    font-size: 18px;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: #305b7b;
-    background: #eee !important;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text .gallery__slider-title {
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text .gallery__slider-par {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .gallery__slider-item:hover .gallery__slider-text .br {
-    display: none;
-  }
 }
 
 .gallery__slider-pic {
@@ -1215,6 +1137,53 @@ a {
 
 .br {
   display: none;
+}
+
+.footer__form-pic .popup__text {
+  position: absolute;
+  background: #f16f5c;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), color-stop(100%, rgba(0, 0, 0, 0.83)));
+  background: -webkit-gradient(linear, left top, left bottom, from(#f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), to(rgba(0, 0, 0, 0.83)));
+  background: linear-gradient(to bottom, #f16f5c 0%, white 0%, rgba(250, 250, 250, 0.83) 2%, rgba(0, 0, 0, 0.83) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#000000', GradientType=0 );
+  height: 100%;
+  color: #f8f8f8;
+  width: 100%;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'RussoOneRegular';
+  text-align: center;
+}
+
+.footer__form-pic .popup__text-title {
+  display: block;
+  margin: 0;
+  font-size: 30px;
+}
+
+.footer__form-pic .popup__text-par {
+  display: block;
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer__form-pic .br {
+  display: block;
 }
 
 .gallery__slider-text {
@@ -1608,6 +1577,7 @@ a {
   width: 72.5px;
   position: absolute;
   bottom: 46%;
+  left: -1%;
 }
 
 .gallery__descr-prise {
@@ -2463,6 +2433,7 @@ a {
 }
 
 .footer .row {
+  position: relative;
   width: 90%;
   height: 100%;
   padding-top: 95px;
@@ -2604,35 +2575,10 @@ a {
   overflow: hidden;
 }
 
-.footer__form-pic .gallery__slider-text {
-  height: 100%;
-  background: #f16f5c;
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), color-stop(100%, rgba(0, 0, 0, 0.83)));
-  background: -webkit-gradient(linear, left top, left bottom, from(#f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), to(rgba(0, 0, 0, 0.83)));
-  background: linear-gradient(to bottom, #f16f5c 0%, white 0%, rgba(250, 250, 250, 0.83) 2%, rgba(0, 0, 0, 0.83) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#000000', GradientType=0 );
-  font-size: 30px;
-  line-height: 30px;
-  cursor: pointer;
-}
-
-.footer__form-pic .gallery__slider-text .gallery__slider-par {
-  margin-top: 7px;
-  font-size: 14px;
-}
-
-.footer__form-pic .gallery__slider-text .br {
-  display: block;
-}
-
 @media screen and (max-width: 1200px) {
   .footer__form-pic {
     height: 245px;
     width: 195px;
-  }
-
-  .footer__form-pic .gallery__slider-text {
-    font-size: 20px;
   }
 }
 
@@ -2641,15 +2587,6 @@ a {
     height: 175px;
     width: 135px;
     line-height: 20px;
-  }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-title {
-    font-size: 18px;
-  }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-par {
-    margin-top: 4px;
-    font-size: 8px;
   }
 }
 
@@ -2660,17 +2597,6 @@ a {
     line-height: 5px;
     display: none;
   }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-title {
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-par {
-    font-size: 10px;
-  }
 }
 
 @media screen and (max-width: 930px) and (max-width: 768px) {
@@ -2679,18 +2605,6 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 60px;
-  }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-title {
-    line-height: 30px;
-    font-size: 30px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
-
-  .footer__form-pic .gallery__slider-par {
-    font-size: 18px !important;
-    margin-top: 60px !important;
   }
 }
 
@@ -2712,31 +2626,6 @@ a {
 
   .footer__form-pic .gallery__slider-par {
     font-size: 18px;
-  }
-
-  .footer__form-pic .gallery__slider-text {
-    height: 100% !important;
-    background: #f16f5c;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), color-stop(100%, rgba(0, 0, 0, 0.83)));
-    background: -webkit-gradient(linear, left top, left bottom, from(#f16f5c), color-stop(0%, white), color-stop(2%, rgba(250, 250, 250, 0.83)), to(rgba(0, 0, 0, 0.83)));
-    background: linear-gradient(to bottom, #f16f5c 0%, white 0%, rgba(250, 250, 250, 0.83) 2%, rgba(0, 0, 0, 0.83) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16f5c', endColorstr='#000000', GradientType=0 );
-    font-size: 30px;
-    line-height: 30px;
-    cursor: pointer;
-  }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-tetle {
-    font-size: 30px;
-  }
-
-  .footer__form-pic .gallery__slider-text .gallery__slider-par {
-    margin-top: 7px;
-    font-size: 14px;
-  }
-
-  .footer__form-pic .gallery__slider-text .br {
-    display: block;
   }
 }
 
@@ -2958,6 +2847,13 @@ a {
   max-width: 99%;
   max-height: 99%;
   background: url("../img/table-size.jpg") no-repeat top center;
+}
+
+.footer__copyright {
+  margin: 6.1% auto 0;
+  bottom: 0;
+  color: #e5e5e5;
+  font-size: 14px;
 }
 
 .owl-carousel .owl-stage {

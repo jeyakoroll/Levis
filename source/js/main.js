@@ -31,11 +31,6 @@ $(document).ready(function () {
       autoWidth: true,
       navContainer: '.reviews__slider-link',
       dotsContainer: '.reviews__items-list',
-      // itemsDesktop : [1199,10],
-      // itemsDesktopSmall : [980,9],
-      // itemsTablet: [768,5],
-      // itemsTabletSmall: false,
-      // itemsMobile : [479,4]
       responsiveClass:true,
       responsive:{
           0:{
@@ -44,7 +39,7 @@ $(document).ready(function () {
               loop: true,
               autoWidth: true,
               autoplay: true,
-              center: true,
+              // center: false,
               dots: false
           },
           500:{
@@ -52,14 +47,14 @@ $(document).ready(function () {
               loop: true,
               autoWidth: true,
               margin: 200,
-              center: true,
+              // center: false,
               // autoWidth: false,
               dots: false
           },
           768:{
               items:1,
               loop:true,
-              center: true,
+              // center: true,
               // autoWidth: false,
               dots: true
           }
@@ -82,7 +77,7 @@ $(document).ready(function () {
 
 	// form at bottom of page
 	$( '.footer__form-text input[name=name_last]' ).closest( '.form-group' ).after(
-        '<div class="form-group"><select class="form-control" style="border-radius: 5px;" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Размер (полномерки)</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option></select></div>'
+        '<div class="form-group"><select class="form-control" style="border-radius: 5px;" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Размер (полномерки)</option><option value="grey" class="option" style="background-color: transparent;">39</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option><option value="grey" class="option" style="background-color: transparent;">46</option><option value="grey" class="option" style="background-color: transparent;">47</option></select></div>'
     );
 
     $( '.footer__form-text select[name=size]' ).addClass( 'footer__form-size' );
@@ -103,7 +98,7 @@ $(document).ready(function () {
             'opacity': '0',
             'display': 'none'
         });
-        preview.animate({
+        preview.stop(true, true).animate({
         height: preview.get(0).scrollHeight
         }, 300, function(){
             preview.height('auto');
@@ -119,7 +114,7 @@ $(document).ready(function () {
     			mobileText = $(this).closest('.mob__slid-list').find('.gallery__slider-text_mobile');
 
       if ( preview.hasClass('open') ) {
-  			preview.animate({
+  			preview.stop(true, true).animate({
   			height: 0
 			}, 300 );
 			
@@ -196,7 +191,8 @@ $(document).ready(function () {
         e.preventDefault();
         showReviews($(this).attr('href'), true);
     }
-
+    
+    // GO TO FORM ON DESKTOP
     // buy button
     $('.gallery__descr-button_buy').on('click', showFormWatch);
     $('.gallery__descr-button_buy').bind('tap', showFormWatch);
@@ -207,6 +203,24 @@ $(document).ready(function () {
     function showFormWatch (e) {
         e.preventDefault();
         showForm($(this).data('href'), true);
+    }
+
+    // GO TO FORM AND SIZE TABLE ON MOBILE
+    // buy button
+    $('.mob__go-to-form').on('click', showFormMobile);
+    $('.mob__go-to-form').bind('tap', showFormMobile);
+    // size button
+    $('.mob__go-to-size').on('click', showSizeMobile);
+    $('.mob__go-to-size').bind('tap', showSizeMobile);
+
+    function showSizeMobile (e) {
+        e.preventDefault();
+        showPhoneSize($(this).data('size'), true);
+    }
+
+    function showFormMobile (e) {
+        e.preventDefault();
+        showPhoneForm($(this).data('form'), true);
     }
 
     // showReviews(window.location.hash, false);
@@ -269,6 +283,26 @@ $(document).ready(function () {
     function showForm(section, isAnimate) {
         var 
             reqSection = $('.footer__form').filter('[data-section="' + section +'"]'),
+            reqSectionPos = reqSection.offset().top;
+
+        if (isAnimate) {
+            $('body, html').animate({scrollTop: reqSectionPos}, 500);
+        }
+    }
+
+    function showPhoneForm(section, isAnimate) {
+        var 
+            reqSection = $('.footer__form-title').filter('[data-section="' + section +'"]'),
+            reqSectionPos = reqSection.offset().top;
+
+        if (isAnimate) {
+            $('body, html').animate({scrollTop: reqSectionPos}, 500);
+        }
+    }
+
+    function showPhoneSize(section, isAnimate) {
+        var 
+            reqSection = $('.footer__size-title').filter('[data-section="' + section +'"]'),
             reqSectionPos = reqSection.offset().top;
 
         if (isAnimate) {
