@@ -79,7 +79,7 @@ $(document).ready(function () {
 
 	// form at bottom of page
 	$( '.footer__form-text input[name=name_last]' ).closest( '.form-group' ).after(
-        '<div class="form-group"><select class="form-control" style="border-radius: 5px;" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Размер (полномерки)</option><option value="grey" class="option" style="background-color: transparent;">39</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option><option value="grey" class="option" style="background-color: transparent;">46</option><option value="grey" class="option" style="background-color: transparent;">47</option></select></div>'
+        '<div class="form-group"><select class="form-control" style="border-radius: 5px;" required name="size"><option selected="selected" value="" class="option" style="background-color: transparent;">Размер (полномерки)</option><option value="xs" class="option" style="background-color: transparent;">40</option><option value="x" class="option" style="background-color: transparent;">41</option><option value="red" class="option" style="background-color: transparent;">42</option><option value="grey" class="option" style="background-color: transparent;">43</option><option value="grey" class="option" style="background-color: transparent;">44</option><option value="grey" class="option" style="background-color: transparent;">45</option></select></div>'
     );
 
     $( '.footer__form-text select[name=size]' ).addClass( 'footer__form-size' );
@@ -248,7 +248,6 @@ function showSection(section, isAnimate) {
       direction = section.replace(/#/, ''),
       reqSection = $('.section').filter('[data-section="' + direction + '"]'),
       reqSectionPos = reqSection.offset().top + 1;
-console.log(reqSectionPos);
       if (isAnimate) {
         $('body, html').animate({scrollTop: reqSectionPos}, 500);
       } else {
