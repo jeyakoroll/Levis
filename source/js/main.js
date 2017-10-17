@@ -163,11 +163,15 @@ $(document).ready(function () {
     function showFormWatch (e) {
         e.preventDefault();
         var 
+            that = $(this),
             src = $('.active__prev .gallery__preview-pic').attr('src'),
+            color = that.closest('.gallery__descr-list').find('.gallery__color').text(),
             bottomPic = $('.img-footer'),
+            bottomText = $('.text-footer'),
             changePic = a => `background: url('${a}') no-repeat top/cover;`;
 
             bottomPic.attr('style', changePic(src));
+            bottomText.text(color);
 
         showForm($(this).data('href'), true);
     }
@@ -185,9 +189,11 @@ $(document).ready(function () {
       var   
             that = $(this),
             src = that.closest('.mob__slid-list').find('.gallery__slider-pic').attr('style'),
+            color = that.closest('.gallery__descr-list').find('.gallery__color').text(),
             bottomPic = $('.img-footer');
 
             bottomPic.attr('style', src);
+            bottomText.text(color);
 
       showPhoneForm($(this).data('form'), true);
   }
