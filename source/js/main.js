@@ -91,45 +91,45 @@ $(document).ready(function () {
     $('.footer__form-text input[name=name_last]').attr("placeholder","Телефон");
 
     // show mobile description
-    $('.gallery__slider-text_mobile').click( function() {
-      var 
-          that = $(this),
-          preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr');
+    // $('.gallery__slider-text_mobile').click( function() {
+    //   var 
+    //       that = $(this),
+    //       preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr');
 
-      if ( !preview.hasClass('open') ) {
-      that.css({
-          'opacity': '0',
-          'display': 'none'
-      });
-      preview.stop(true, true).animate({
-      height: preview.get(0).scrollHeight
-      }, 300, function(){
-          preview.height('auto');
-      });
-      }
-      preview.toggleClass('open');
-    });
+    //   if ( !preview.hasClass('open') ) {
+    //   that.css({
+    //       'opacity': '0',
+    //       'display': 'none'
+    //   });
+    //   preview.stop(true, true).animate({
+    //   height: preview.get(0).scrollHeight
+    //   }, 300, function(){
+    //       preview.height('auto');
+    //   });
+    //   }
+    //   preview.toggleClass('open');
+    // });
 		
     // hide mobile descr
-    $('.gallery__mobile-header').on('click', function() {
-      var 
-          that = $(this),
-    			preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr'),
-    			mobileText = $(this).closest('.mob__slid-list').find('.gallery__slider-text_mobile');
+  //   $('.gallery__mobile-header').on('click', function() {
+  //     var 
+  //         that = $(this),
+  //   			preview = $(this).closest('.mob__slid-list').find('.gallery__mobile-descr'),
+  //   			mobileText = $(this).closest('.mob__slid-list').find('.gallery__slider-text_mobile');
 
-      if ( preview.hasClass('open') ) {
-  			preview.stop(true, true).animate({
-  			height: 0
-			}, 300 );
+  //     if ( preview.hasClass('open') ) {
+  // 			preview.stop(true, true).animate({
+  // 			height: 0
+		// 	}, 300 );
 			
-			mobileText.css({
-			 'transition': 'opacity 100ms',
-       'opacity': '1',
-       'display': 'flex'
-    	});
-      preview.toggleClass('open');
-		}
-  })
+		// 	mobileText.css({
+		// 	 'transition': 'opacity 100ms',
+  //      'opacity': '1',
+  //      'display': 'flex'
+  //   	});
+  //     preview.toggleClass('open');
+		// }
+  // })
 
   // descr for gallery slider
   $('.gallery-item').click( function (e) {
