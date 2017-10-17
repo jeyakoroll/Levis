@@ -6,11 +6,12 @@ $(document).ready(function () {
   owlGallery.owlCarousel({
       loop:true,
       margin: 20,
-      center: false,
+      center: true,
       dots: true,
       nav: true,
       autoWidth: true,
-      navContainer: '#owl-next',
+      navContainer: '#owl-navs',
+      transitionStyle : 'fade',
       responsiveClass:true,
       responsive:{
           0:{
@@ -190,6 +191,7 @@ $(document).ready(function () {
             that = $(this),
             src = that.closest('.mob__slid-list').find('.gallery__slider-pic').attr('style'),
             color = that.closest('.gallery__descr-list').find('.gallery__color').text(),
+            bottomText = $('.text-footer'),
             bottomPic = $('.img-footer');
 
             bottomPic.attr('style', src);
