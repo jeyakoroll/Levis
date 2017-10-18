@@ -2,6 +2,10 @@ $(document).ready(function () {
   var owlGallery = $("#slider-gallery"),
       owlReviews = $("#slider-reviews");
 
+  // if (window.screen.height==568) { // iPhone 4"
+  //   document.querySelector("meta[name=viewport]").content="width=320.1";
+  // }
+
 
   owlGallery.owlCarousel({
       loop:true,
@@ -36,11 +40,11 @@ $(document).ready(function () {
       responsive:{
           0:{
               items: 1,
-              margin: 200,
+              margin: 100,
               loop: true,
               autoWidth: true,
               autoplay: true,
-              // center: false,
+              center: true,
               dots: false
           },
           500:{
@@ -48,8 +52,8 @@ $(document).ready(function () {
               loop: true,
               autoWidth: true,
               margin: 200,
-              // center: false,
-              // autoWidth: false,
+              center: true,
+              autoplay: false,
               dots: false
           },
           720:{
@@ -62,7 +66,6 @@ $(document).ready(function () {
           }
       }
   });
-
 
 	// switching images in models area
 
@@ -84,7 +87,7 @@ $(document).ready(function () {
     );
 
     $( '.footer__form-text select[name=size]' ).addClass( 'footer__form-size' );
-    $( '.footer__form-text>.order-form' ).addClass( 'footer__form-order' );
+    $( '.footer__form-text .order-form' ).addClass( 'footer__form-order' );
     $( '.footer__form-text input' ).addClass( 'footer__form-data' );
     $( '.footer__form-text button' ).addClass( 'footer__form-button' );
     $( '.footer__form-text select[name=size]' ).addClass( 'footer__form-select' );
@@ -169,8 +172,10 @@ $(document).ready(function () {
             color = that.closest('.gallery__descr-list').find('.gallery__color').text(),
             bottomPic = $('.img-footer'),
             bottomText = $('.text-footer'),
-            changePic = a => `background: url('${a}') no-repeat top/cover;`;
-
+            changePic = function(a) {
+              return 'background: url("' + a + '") no-repeat top/cover;';
+            }
+            console.log(changePic(src))
             bottomPic.attr('style', changePic(src));
             bottomText.text(color);
 
@@ -251,17 +256,17 @@ $(window).scroll(function() {
   checkSection();
 });
 
-function showSection(section, isAnimate) {
-  var 
-      direction = section.replace(/#/, ''),
-      reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-      reqSectionPos = reqSection.offset().top + 1;
-      if (isAnimate) {
-        $('body, html').animate({scrollTop: reqSectionPos}, 500);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-}
+  function showSection(section, isAnimate) {
+    var 
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top + 1;
+        if (isAnimate) {
+          $('body, html').animate({scrollTop: reqSectionPos}, 500);
+        } else {
+          $('body, html').scrollTop(reqSectionPos);
+        }
+  }
 
 function checkSection() {
   $('.section').each((function() {
