@@ -2196,7 +2196,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .advantages__content {
-    width: 100%;
+    width: auto;
     margin-left: 7vw;
   }
 }
@@ -2543,6 +2543,11 @@ a {
   .reviews {
     display: block;
     min-height: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reviews {
     padding-bottom: 70px;
   }
 }
@@ -2588,9 +2593,15 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .reviews__title {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .reviews__title {
-    width: 400px;
+    width: auto;
     text-align: center;
   }
 }
@@ -2695,14 +2706,13 @@ a {
 
 @media screen and (max-width: 768px) {
   .reviews__slider-wrap {
-    width: 720px;
+    display: block;
   }
 }
 
 @media screen and (max-width: 480px) {
   .reviews__slider-wrap {
     height: 350px;
-    width: 400px;
   }
 }
 
@@ -2736,6 +2746,8 @@ a {
 
 @media screen and (max-width: 768px) {
   .reviews__slider {
+    display: block;
+    margin: 90px auto;
     min-height: 280px;
     min-width: 0;
     width: 350px;
@@ -2888,6 +2900,13 @@ a {
   width: 27px;
   height: 27px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__slider-link {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .left {

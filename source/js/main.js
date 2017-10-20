@@ -28,7 +28,7 @@ $(document).ready(function () {
 
   owlReviews.owlCarousel({
       loop:true,
-      margin: 500,
+      margin: 300,
       items: 1,
       center: true,
       dots: true,
@@ -47,15 +47,6 @@ $(document).ready(function () {
               center: true,
               dots: false
           },
-          // 320:{
-          //     items: 1,
-          //     margin: 100,
-          //     loop: true,
-          //     autoWidth: true,
-          //     autoplay: true,
-          //     center: true,
-          //     dots: false
-          // },
           500:{
               items:1,
               loop: true,
@@ -65,7 +56,7 @@ $(document).ready(function () {
               autoplay: false,
               dots: false
           },
-          720:{
+          768:{
               items:1,
               loop:true,
               autoWidth: true,
