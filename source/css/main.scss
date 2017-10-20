@@ -280,8 +280,9 @@ a {
   @include laptop {
     width: auto;
   }
-  @include laptop {
+  @include tablets {
     width: auto;
+    margin: 0;
   }
 }
 
@@ -598,13 +599,16 @@ a {
     padding-bottom: 40px;
   }
   @include tablets {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: flex-start;
+    @include clearfix;
+    display: block;
+    min-height: 715px;
+    padding-top: 40px;
+    padding-bottom: 0;
   }
   @include phones {
      padding-top: 40px;
-     padding-bottom: 40px;
+     padding-bottom: 50px;
+     margin-bottom: -50px;
   }
 }
 
@@ -616,27 +620,19 @@ a {
     align-items: center;
     padding-left: 4vw;
   }
-  // @include main(994px) {
-  //   width: 800px;
-  // }
   @include laptop {
     flex-flow: column wrap;
     align-items: center;
     max-width: 998px;
-        // width: 80%;
   }
   @include tablets {
-    width: 768px;
     display: block;
     text-align: right;
-    // width: auto;
-    // margin-left: 35px;
-  }
-  @include main(670px) {
-    max-width: 720px;
+    width: 100%;
+    margin: 0;
   }
   @include phones {
-    // max-width: 480px;
+    margin-bottom: 40px;
     margin-left: 0;
     padding-left: 0;
   }
@@ -666,9 +662,10 @@ a {
   @include tablets {
     margin: 0 auto;
   }
-  @include phones {
-    // margin: 0 auto;
-    // margin-left: 10%;
+  @include small_phones {
+    width: 270px;
+    height: 340px;
+    margin-bottom: 10px;
   }
 }
 
@@ -795,7 +792,7 @@ a {
     width: auto;
   }
   @include tablets {
-    // align-self: flex-start;
+    display: block;
     text-align: center;
     // max-width: 720px;
   }
@@ -814,7 +811,8 @@ a {
     margin-bottom: 40px;
   }
   @include tablets {
-    width: 720px;
+    display: block;
+    // width: 720px;
     display: block;
   }
 }
@@ -830,7 +828,7 @@ a {
   @include tablets {
     display: block;
     text-align: center;
-    max-width: 720px;
+    // max-width: 720px;
   }
 }
 
@@ -854,15 +852,16 @@ a {
 }
 
 .mob__slid {
-  display: block;
+  display: none;
   // justify-content: center;
   @include tablets {
+    display: block;
     text-align: center;
   }
 }
 
 .mob__slid-list {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
 
@@ -1164,35 +1163,10 @@ a {
     .gallery__slider-par {
       font-size: 18px;
     }
-    // &:hover, :active, :focus {
-    //   .gallery__slider-text {
-    //     height: 67px;
-    //     font-size: 18px ; 
-    //     cursor: pointer;
-    //     display: flex;
-    //     color: #305b7b;
-    //     background: #eee !important;
-    //     flex-flow: row wrap;
-    //     align-items: center;
-    //     .gallery__slider-title {
-    //       font-size: 12px;
-    //       line-height: 15px;
-    //       margin-top: 0 !important;
-    //       margin-bottom: 0 !important;
-    //     }
-    //     .gallery__slider-par {
-    //       margin-top: 0 !important;
-    //       margin-bottom: 0 !important;
-    //       // font-size: 14px;
-    //     } 
-    //     .br {
-    //       display: none;
-    //     }
-    //   }
-    // }
   }
   @include small_phones {
-    width: 340px;
+    width: 300px;
+    height: 220px;
   }
 }
 
@@ -1401,6 +1375,9 @@ a {
     flex-flow: column wrap;
     // align-items: center;
   }
+  @include small_phones {
+    width: 300px;
+  }
 }
 
 .gallery__mobile {
@@ -1409,12 +1386,12 @@ a {
     width: auto;
   }
   @include tablets {
-    width: 768px;
-    display: flex;
+    // width: 768px;
+    display: block;
     flex-flow: column wrap;
   }
   @include main(720px) {
-    width: 720px;
+    // width: 720px;
   }
   @include phones {
     width: auto;
@@ -1448,6 +1425,9 @@ a {
     flex-flow: column wrap;
     padding-left: 12%;
   }
+  @include small_phones {
+    padding-left: 5%;
+  }
 }
 
 .gallery__descr-title {
@@ -1466,8 +1446,11 @@ a {
     margin-bottom: 15px;
   }
   @include tablets {
+    margin-left: -38px;
+    display: block;
     margin-top: 30px;
-    padding-left: 18%;
+    padding-left: 0;
+    // padding-left: 18%;
     margin-bottom: 5px;
   }
 }
@@ -1484,6 +1467,9 @@ a {
   }
   @include tablets {
     font-weight: bolder;
+  }
+  @include small_phones {
+    padding-left: 4%;
   }
 }
 
@@ -1517,6 +1503,10 @@ a {
   }
   @include tablets {
     margin-bottom: 30px;
+  }
+  @include small_phones {
+    margin-top: 5px;
+    padding-left: 4%;
   }
 }
 
@@ -1560,11 +1550,15 @@ a {
   flex-flow: row wrap;
   position: relative;
   @include tablets {
+    display: block;
     flex-flow: column wrap;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     justify-content: center;
-    margin-left: -15px;
+    margin-left: -38px;
+  }
+  @include small_phones {
+    margin-bottom: 12px;
   }
 }
 
@@ -1602,6 +1596,7 @@ a {
   }
   @include tablets {
     font-size: 11px;
+    margin: 0 auto;
     margin-bottom: 15px;
   }
 }
@@ -1649,7 +1644,7 @@ a {
     padding-top: 4px;
     font-size: 10px;
     margin-bottom: 25px;
-    margin-left: -10px;
+    margin: 0 auto;
     &:focus {
       padding-top: 5px;
     }
@@ -1792,6 +1787,9 @@ a {
 .empty {
   height: 118px;
   background-color: #fffcf1;
+  @include laptop {
+    height: 0;
+  }
   @include tablets {
     display: none;
   }
@@ -1804,6 +1802,9 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  @include laptop {
+    height: 350px;
+  }
   @include tablets {
     justify-content: flex-start;
   }
@@ -1815,7 +1816,8 @@ a {
   @include laptop {
     width: 90%;
     justify-content: center;
-    padding: 6vh 0;
+    // padding: 6vh 0;
+    padding-bottom: 15px;
   }
   @include tablets {
     padding: 4vh 0 5vh;
