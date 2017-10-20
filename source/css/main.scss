@@ -306,6 +306,8 @@ a {
 	width: 100%;
 	background: url('../img/fon-2.jpg') no-repeat center top/cover;
   @include tablets {
+    @include clearfix();
+    display: block;
     height: 340px;
     background: url('../img/back-mobile2.jpg') no-repeat center top/cover; 
   }
@@ -456,17 +458,21 @@ a {
     justify-content: center;
   }  
   @include tablets {
-    justify-content: center;
+    width: 100%;
+    display: block;
   }
   @include phones {
     // margin-top: 25px;
-    height: 100vh;
+    // height: 100vh;
   }
 }
 
 .header__bottom .row {
   // max-width: 1140px;
   padding-left: 3vh;
+  @include tablets {
+    display: block;
+  }
 }
 
 .header__bottom-aside {
@@ -480,20 +486,26 @@ a {
     padding-left: 0;
   }
   @include tablets {
-    // display: none;
+    display: inline-block;
+    width: 100%;
   }
   @include phones {
-    display: flex;
+    display: inline-block;
   }
 }
 
 .header__bottom-title {
   margin-bottom: 20px;
   text-shadow: 0px 0px 30px #000;
+  @include tablets {
+    margin-bottom: 0;
+  }
+  @include main(690px) {
+    margin-bottom: 110px;
+  }
   @include phones {
-    // display: flex;
-    // flex-flow: column wrap;
-    // align-items: center;
+    margin-bottom: 0;
+    margin-top: 200px;
   }
 }
 
@@ -519,10 +531,13 @@ a {
     align-items: center;
   }
   @include tablets {
-    margin-top: -40%;
+    // margin-top: -40%;
+    display: block;
+    text-align: center;
+    margin: 12% auto 0;
   }
   @include main(680px) {
-    margin-top: 80%;
+    margin: 15% auto 0;
   }
   @include phones {
     margin-top: 15%;
@@ -2594,3 +2609,12 @@ a {
     // max-width: 720px !important;
   }
 }
+
+// STYLE FOR all DEVICES LESS TABLETS (include iOS old 'things')
+// .block {
+//   display: block;
+// }
+
+// .header__top nav {
+//   // display: none;
+// }

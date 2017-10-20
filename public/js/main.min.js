@@ -258,6 +258,16 @@ $(document).ready(function () {
   });
 
   showSection(window.location.hash, false);
+
+  // LAYOUT FOR TABLETS AND LESS
+  // $(window).on('load resize', function () {
+  //   var screenWidth = $(window).width(),
+  //       tablets = screenWidth < 768;
+
+  //   if (tablets) {
+  //     $('main *').addClass('block');
+  //   }
+  // });
  
 });
 

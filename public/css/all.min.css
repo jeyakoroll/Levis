@@ -150,8 +150,19 @@ a {
 
 @media screen and (max-width: 768px) {
   .header {
+    display: block;
     height: 340px;
     background: url("../img/back-mobile2.jpg") no-repeat center top/cover;
+  }
+
+  .header:before,
+  .header:after {
+    content: "";
+    display: table;
+  }
+
+  .header:after {
+    clear: both;
   }
 }
 
@@ -381,20 +392,19 @@ a {
 
 @media screen and (max-width: 768px) {
   .header__bottom {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header__bottom {
-    height: 100vh;
+    width: 100%;
+    display: block;
   }
 }
 
 .header__bottom .row {
   padding-left: 3vh;
+}
+
+@media screen and (max-width: 768px) {
+  .header__bottom .row {
+    display: block;
+  }
 }
 
 .header__bottom-aside {
@@ -423,17 +433,41 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header__bottom-aside {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .header__bottom-aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
   }
 }
 
 .header__bottom-title {
   margin-bottom: 20px;
   text-shadow: 0px 0px 30px #000;
+}
+
+@media screen and (max-width: 768px) {
+  .header__bottom-title {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .header__bottom-title {
+    margin-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__bottom-title {
+    margin-bottom: 0;
+    margin-top: 200px;
+  }
 }
 
 .header__bottom-title_desktop {
@@ -473,13 +507,15 @@ a {
 
 @media screen and (max-width: 768px) {
   .header__bottom-mobile {
-    margin-top: -40%;
+    display: block;
+    text-align: center;
+    margin: 12% auto 0;
   }
 }
 
 @media screen and (max-width: 680px) {
   .header__bottom-mobile {
-    margin-top: 80%;
+    margin: 15% auto 0;
   }
 }
 
