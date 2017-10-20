@@ -316,6 +316,9 @@ a {
     width: auto;
     height: 600px;
   }
+  @include small_phones {
+    width: auto;
+  }
 }
 
 .header__top {
@@ -474,6 +477,9 @@ a {
   @include tablets {
     display: block;
   }
+  @include small_phones {
+    width: 100%;
+  }
 }
 
 .header__bottom-aside {
@@ -493,6 +499,9 @@ a {
   @include phones {
     display: inline-block;
   }
+  @include small_phones {
+    // width: auto;
+  }
 }
 
 .header__bottom-title {
@@ -507,6 +516,11 @@ a {
   @include phones {
     margin-bottom: 0;
     margin-top: 200px;
+  }
+  @include small_phones {
+    float: left;
+    margin-left: 38px;
+    @include clearfix;
   }
 }
 
@@ -1426,7 +1440,7 @@ a {
     padding-left: 12%;
   }
   @include small_phones {
-    padding-left: 5%;
+    padding-left: 10%;
   }
 }
 
@@ -1558,7 +1572,8 @@ a {
     margin-left: -38px;
   }
   @include small_phones {
-    margin-bottom: 12px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
   }
 }
 
@@ -1679,13 +1694,16 @@ a {
     padding-top: 50px;
   }
   @include tablets {
-    max-width: 720px;
+    // max-width: 720px;
     display: block;
     text-align: center;
   }
   @include phones {
     padding-top: 40px;
     padding-left: 15px;
+  }
+  @include small_phones {
+    padding-left: 0;
   }
 }
 
@@ -1744,9 +1762,10 @@ a {
   text-transform: uppercase;
   @include tablets {
     text-transform: none;
-    margin: 5px auto;
+    display: block;
+    margin: 0px auto 5px;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
   @include phones {
     // margin-bottom: 3vh;
@@ -1762,6 +1781,7 @@ a {
   color: #305b7b;
   margin-right: 30px;
   @include tablets {
+    // display: block;
     margin-right: 17px;
   }
 }
@@ -1806,7 +1826,8 @@ a {
     height: 350px;
   }
   @include tablets {
-    justify-content: flex-start;
+
+    display: inline-block;
   }
 }
 
@@ -1821,18 +1842,19 @@ a {
   }
   @include tablets {
     padding: 4vh 0 5vh;
-    width: 768px;
+    width: 100%;
+    padding-top: 0;
   }
   @include main(720px) {
-    width: 720px;
+    // width: 720px;
   }
   @include phones {
-    max-width: 480px;
+    // max-width: 480px;
     // width: 480px;
-    padding: 5vh 0;
+    // padding: 5vh 0;
   }
   @include small_phones {
-    padding-left: 25px;
+    // padding-left: 25px;
   }
 }
 
@@ -1850,11 +1872,20 @@ a {
     padding: 6vh 0;
   }
   @include tablets {
+    @include clearfix;
+    height: 350px;
+    width: 82%;
+    display: inline-block;
     margin: 0 auto;
-    padding: 4vh 0 5vh;
+    padding: 1.5vh 0 5vh;
+    padding-left: 7%;
   }
   @include phones {
-    padding: 5vh 0;
+    width: 89%;
+    padding: 7%;
+  }
+  @include small_phones {
+     padding-top: 9%;
   }
 }
 
@@ -1883,6 +1914,8 @@ a {
     padding: 5vh 0;
   }
   @include tablets {
+    display: block;
+    float: left;
     padding: 4vh 0;
   }
   @include phones {
@@ -1894,9 +1927,9 @@ a {
   width: 32px;
   height: 32px;
   margin-bottom: 20px;
-  // @include phones {
-
-  // }
+  @include tablets {
+    margin: 0 auto;
+  }
 }
 
 .relationship__text {
@@ -1904,8 +1937,9 @@ a {
   font-size: 16px;
   color: #f8f8f8;
   display: flex;
-  @include phones {
-    // justify-content: center;
+  @include tablets {
+    margin-top: 18px;
+    display: block;
     text-align: center;
   }
 }

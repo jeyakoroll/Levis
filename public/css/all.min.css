@@ -174,6 +174,12 @@ a {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .header {
+    width: auto;
+  }
+}
+
 .header__top {
   min-height: 75px;
   position: fixed;
@@ -408,6 +414,12 @@ a {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .header__bottom .row {
+    width: 100%;
+  }
+}
+
 .header__bottom-aside {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -468,6 +480,23 @@ a {
   .header__bottom-title {
     margin-bottom: 0;
     margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header__bottom-title {
+    float: left;
+    margin-left: 38px;
+  }
+
+  .header__bottom-title:before,
+  .header__bottom-title:after {
+    content: "";
+    display: table;
+  }
+
+  .header__bottom-title:after {
+    clear: both;
   }
 }
 
@@ -1739,7 +1768,7 @@ a {
 
 @media screen and (max-width: 360px) {
   .gallery__descr-list {
-    padding-left: 5%;
+    padding-left: 10%;
   }
 }
 
@@ -1937,7 +1966,8 @@ a {
 
 @media screen and (max-width: 360px) {
   .gallery__descr-button {
-    margin-bottom: 12px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
   }
 }
 
@@ -2114,7 +2144,6 @@ a {
 
 @media screen and (max-width: 768px) {
   .advantages .row {
-    max-width: 720px;
     display: block;
     text-align: center;
   }
@@ -2124,6 +2153,12 @@ a {
   .advantages .row {
     padding-top: 40px;
     padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .advantages .row {
+    padding-left: 0;
   }
 }
 
@@ -2221,9 +2256,10 @@ a {
 @media screen and (max-width: 768px) {
   .advantages__list-item {
     text-transform: none;
-    margin: 5px auto;
+    display: block;
+    margin: 0px auto 5px;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -2314,9 +2350,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .relationship {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    display: inline-block;
   }
 }
 
@@ -2340,26 +2374,8 @@ a {
 @media screen and (max-width: 768px) {
   .relationship .row {
     padding: 4vh 0 5vh;
-    width: 768px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .relationship .row {
-    width: 720px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .relationship .row {
-    max-width: 480px;
-    padding: 5vh 0;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .relationship .row {
-    padding-left: 25px;
+    width: 100%;
+    padding-top: 0;
   }
 }
 
@@ -2392,14 +2408,35 @@ a {
 
 @media screen and (max-width: 768px) {
   .relationship__wrap {
+    height: 350px;
+    width: 82%;
+    display: inline-block;
     margin: 0 auto;
-    padding: 4vh 0 5vh;
+    padding: 1.5vh 0 5vh;
+    padding-left: 7%;
+  }
+
+  .relationship__wrap:before,
+  .relationship__wrap:after {
+    content: "";
+    display: table;
+  }
+
+  .relationship__wrap:after {
+    clear: both;
   }
 }
 
 @media screen and (max-width: 480px) {
   .relationship__wrap {
-    padding: 5vh 0;
+    width: 89%;
+    padding: 7%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .relationship__wrap {
+    padding-top: 9%;
   }
 }
 
@@ -2448,6 +2485,8 @@ a {
 
 @media screen and (max-width: 768px) {
   .relationship__item {
+    display: block;
+    float: left;
     padding: 4vh 0;
   }
 }
@@ -2464,6 +2503,12 @@ a {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .relationship__icon {
+    margin: 0 auto;
+  }
+}
+
 .relationship__text {
   font-family: 'UbuntuCondensedRegular';
   font-size: 16px;
@@ -2473,8 +2518,10 @@ a {
   display: flex;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .relationship__text {
+    margin-top: 18px;
+    display: block;
     text-align: center;
   }
 }
