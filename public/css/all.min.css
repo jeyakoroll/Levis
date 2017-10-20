@@ -410,13 +410,19 @@ a {
 
 @media screen and (max-width: 768px) {
   .header__bottom .row {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .header__bottom .row {
     width: 100%;
+    display: block;
+    float: left;
+  }
+
+  .header__bottom .row:before,
+  .header__bottom .row:after {
+    content: "";
+    display: table;
+  }
+
+  .header__bottom .row:after {
+    clear: both;
   }
 }
 
@@ -628,13 +634,6 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
-}
-
-@media screen and (max-width: 992px) {
-  .history {
-    padding-top: 80px;
-    padding-bottom: 40px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2409,10 +2408,10 @@ a {
 @media screen and (max-width: 768px) {
   .relationship__wrap {
     height: 350px;
-    width: 82%;
+    width: 100%;
     display: inline-block;
     margin: 0 auto;
-    padding: 1.5vh 0 5vh;
+    padding: 5vh 0 5vh;
     padding-left: 7%;
   }
 
@@ -2429,8 +2428,51 @@ a {
 
 @media screen and (max-width: 480px) {
   .relationship__wrap {
-    width: 89%;
+    width: 75%;
     padding: 7%;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .relationship__wrap {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .relationship__wrap {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 441px) {
+  .relationship__wrap {
+    width: 82%;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .relationship__wrap {
+    width: 84%;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .relationship__wrap {
+    width: 86%;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  .relationship__wrap {
+    width: auto;
+    padding-left: 11%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .relationship__wrap {
+    padding-left: 8%;
   }
 }
 
@@ -2539,6 +2581,12 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-width: 992px) {
+  .reviews {
+    min-height: 765px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .reviews {
     display: block;
@@ -2566,6 +2614,12 @@ a {
   padding-top: 100px;
 }
 
+@media screen and (max-width: 992px) {
+  .reviews .row {
+    padding-top: 50px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .reviews .row {
     display: block;
@@ -2584,12 +2638,6 @@ a {
   .reviews__title {
     text-align: center;
     margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .reviews__title {
-    width: 720px;
   }
 }
 
@@ -2966,6 +3014,12 @@ a {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .sticky__footer {
+    height: 1100px;
+  }
+}
+
 .footer {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
@@ -2995,9 +3049,16 @@ a {
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding-bottom: 105px;
+    display: block;
     margin-top: -1160px;
     min-height: 1160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    margin-top: -1100px;
+    min-height: 1100px;
   }
 }
 
@@ -3074,6 +3135,7 @@ a {
 @media screen and (max-width: 768px) {
   .footer__form {
     width: auto;
+    display: block;
   }
 }
 
@@ -3094,6 +3156,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .footer__form-title {
+    display: block;
     -ms-flex-item-align: center;
     align-self: center;
     margin-bottom: 30px;
@@ -3192,6 +3255,7 @@ a {
 @media screen and (max-width: 768px) {
   .footer__form-pic {
     margin-right: 0;
+    margin: 0 auto 40px;
     width: 340px;
     height: 260px;
   }
@@ -3397,6 +3461,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .footer__size {
+    display: block;
     width: 100%;
     margin-left: -0.5%;
   }
@@ -3418,9 +3483,8 @@ a {
 @media screen and (max-width: 768px) {
   .footer__size-title {
     margin-bottom: 26px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
+    text-align: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -3444,13 +3508,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .footer__size-table {
-    margin-bottom: 35px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .footer__size-table {
-    margin-left: 2%;
+    margin: 0 auto 35px;
   }
 }
 
@@ -3506,13 +3564,13 @@ a {
 
 @media screen and (max-width: 480px) {
   .footer__copyright {
-    margin-bottom: -20%;
+    margin-bottom: -15%;
   }
 }
 
 @media screen and (max-width: 360px) {
   .footer__copyright {
-    margin-bottom: -30%;
+    margin-bottom: -15%;
   }
 }
 
