@@ -140,13 +140,6 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .main {
-    overflow: hidden;
-  }
 }
 
 .header {
@@ -164,6 +157,7 @@ a {
 
 @media screen and (max-width: 480px) {
   .header {
+    width: auto;
     height: 600px;
   }
 }
@@ -479,12 +473,19 @@ a {
 
 @media screen and (max-width: 768px) {
   .header__bottom-mobile {
-    margin-top: 15%;
+    margin-top: -40%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header__bottom-mobile {
+    margin-top: 80%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .header__bottom-mobile {
+    margin-top: 15%;
     margin-left: -2%;
     margin-top: 0;
   }
@@ -622,15 +623,20 @@ a {
 
 @media screen and (max-width: 768px) {
   .history .row {
-    max-width: 768px;
+    width: 768px;
     display: block;
     text-align: right;
   }
 }
 
+@media screen and (max-width: 670px) {
+  .history .row {
+    max-width: 720px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .history .row {
-    max-width: 480px;
     margin-left: 0;
     padding-left: 0;
   }
@@ -666,12 +672,6 @@ a {
 @media screen and (max-width: 768px) {
   .history__pic {
     margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .history__pic {
-    margin-left: 10%;
   }
 }
 
@@ -775,9 +775,8 @@ a {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .history__text-title_laptop {
-    max-width: 480px;
     margin-right: 0;
     text-align: center;
   }
@@ -867,7 +866,6 @@ a {
 @media screen and (max-width: 768px) {
   .gallery .row {
     text-align: center;
-    max-width: 720px;
   }
 }
 
@@ -894,6 +892,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .gallery__title {
+    width: 720px;
     display: block;
   }
 }
@@ -1620,8 +1619,15 @@ a {
   display: none;
 }
 
+@media screen and (max-width: 992px) {
+  .gallery__mobile {
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .gallery__mobile {
+    width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1629,6 +1635,18 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .gallery__mobile {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery__mobile {
+    width: auto;
   }
 }
 
@@ -1953,7 +1971,7 @@ a {
   .gallery__descr-button_size {
     display: block;
     text-align: center;
-    padding-top: 7px;
+    padding-top: 4px;
     font-size: 10px;
     margin-bottom: 25px;
     margin-left: -10px;
@@ -2066,7 +2084,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .advantages__content {
-    width: auto;
+    width: 100%;
     margin-left: 7vw;
   }
 }
@@ -2134,7 +2152,9 @@ a {
 
 @media screen and (max-width: 480px) {
   .advantages__list-item {
+    padding-left: 7%;
     text-align: left;
+    font-size: 12px;
   }
 }
 
@@ -2231,13 +2251,26 @@ a {
 @media screen and (max-width: 768px) {
   .relationship .row {
     padding: 4vh 0 5vh;
+    width: 768px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .relationship .row {
     width: 720px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .relationship .row {
+    max-width: 480px;
     padding: 5vh 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .relationship .row {
+    padding-left: 25px;
   }
 }
 
@@ -2408,9 +2441,14 @@ a {
 
 @media screen and (max-width: 768px) {
   .reviews__title {
-    max-width: 720px;
     text-align: center;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .reviews__title {
+    width: 720px;
   }
 }
 
@@ -2517,6 +2555,12 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__slider-wrap {
+    width: 720px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2750,7 +2794,7 @@ a {
     width: 120px;
     height: 100px;
     top: -50px;
-    right: 15px;
+    right: -10px;
   }
 }
 

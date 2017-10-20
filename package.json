@@ -6,6 +6,7 @@
   "dependencies": {
     "bower": "^1.8.0",
     "browser-sync": "^2.18.12",
+    "browserslist": "^2.5.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",

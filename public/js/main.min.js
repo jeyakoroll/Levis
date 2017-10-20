@@ -40,13 +40,22 @@ $(document).ready(function () {
       responsive:{
           0:{
               items: 1,
-              margin: 100,
+              margin: 200,
               loop: true,
               autoWidth: true,
               autoplay: true,
               center: true,
               dots: false
           },
+          // 320:{
+          //     items: 1,
+          //     margin: 100,
+          //     loop: true,
+          //     autoWidth: true,
+          //     autoplay: true,
+          //     center: true,
+          //     dots: false
+          // },
           500:{
               items:1,
               loop: true,
@@ -233,7 +242,7 @@ $(document).ready(function () {
 
   function showPhoneSize(section, isAnimate) {
       var 
-          reqSection = $('.footer').filter('[data-section="' + section +'"]'),
+          reqSection = $('.footer__size-title').filter('[data-section="' + section +'"]'),
           reqSectionPos = reqSection.offset().top;
 
       if (isAnimate) {
